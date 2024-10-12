@@ -2,7 +2,8 @@ import requests
 import base64
 import streamlit as st
 from PIL import Image
-from video_cropper import save_img_range
+from models.video_cropper import save_img_range
+#from video_cropper import save_img_range
 from io import BytesIO
 import logging
 
