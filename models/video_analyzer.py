@@ -91,3 +91,4 @@ def analyze_video(video_name : str, video_ext : str = 'mp4') -> str:
             return f"API request failed: {e}"
     else :
         return "No images found for this video name"
+

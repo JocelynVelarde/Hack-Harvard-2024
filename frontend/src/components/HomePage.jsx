@@ -9,20 +9,21 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 
-export default function HomePage() {
-  const [uploadedImage, setUploadedImage] = useState(null)
+export default function SecurityDashboard() {
+  const [uploadedFile, setUploadedFile] = useState(null)
+  const [fileType, setFileType] = useState(null)
   const [sentimentAnalysis, setSentimentAnalysis] = useState("")
   const [heatmapImage, setHeatmapImage] = useState(null)
   const [isAnalyzing, setIsAnalyzing] = useState(false)
   const fileInputRef = useRef(null)
 
   // Mocked API calls - replace these with actual API calls in a real application
-  const analyzeSentiment = async (imageUrl) => {
+  const analyzeSentiment = async (fileUrl) => {
     await new Promise(resolve => setTimeout(resolve, 1000))
-    return "The image shows a busy street corner with several pedestrians. There appears to be no immediate security threats visible."
+    return "The footage shows a busy street corner with several pedestrians. There appears to be no immediate security threats visible."
   }
 
-  const generateHeatmap = async (imageUrl) => {
+  const generateHeatmap = async (fileUrl) => {
     await new Promise(resolve => setTimeout(resolve, 1000))
     return "/placeholder.svg?height=300&width=400"
   }
@@ -32,7 +33,8 @@ export default function HomePage() {
     if (file) {
       const reader = new FileReader()
       reader.onload = async (e) => {
-        setUploadedImage(e.target.result)
+        setUploadedFile(e.target.result)
+        setFileType(file.type.startsWith('video') ? 'video' : 'image')
         setIsAnalyzing(true)
         
         try {
@@ -42,7 +44,7 @@ export default function HomePage() {
           const heatmap = await generateHeatmap(e.target.result)
           setHeatmapImage(heatmap)
         } catch (error) {
-          console.error("Error analyzing image:", error)
+          console.error("Error analyzing file:", error)
         } finally {
           setIsAnalyzing(false)
         }
@@ -53,7 +55,7 @@ export default function HomePage() {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-6">TheftWatch</h1>
+      <h1 className="text-3xl font-bold mb-6">Security Dashboard</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Card>
@@ -72,7 +74,7 @@ export default function HomePage() {
                     <span className="font-semibold">Click to upload</span> or drag and drop
                   </p>
                   <p className="text-xs text-gray-500 dark:text-gray-400">
-                    SVG, PNG, JPG or GIF (MAX. 800x400px)
+                    MP4, AVI, MOV, SVG, PNG, JPG or GIF
                   </p>
                 </div>
                 <Input
@@ -81,13 +83,19 @@ export default function HomePage() {
                   className="hidden"
                   onChange={handleFileChange}
                   ref={fileInputRef}
-                  accept="image/*"
+                  accept="video/*,image/*"
                 />
               </Label>
             </div>
-            {uploadedImage && (
+            {uploadedFile && (
               <div className="mt-4">
-                <img src={uploadedImage} alt="Uploaded security footage" className="w-full h-auto rounded-lg" />
+                {fileType === 'video' ? (
+                  <video src={uploadedFile} controls className="w-full h-auto rounded-lg">
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <img src={uploadedFile} alt="Uploaded security footage" className="w-full h-auto rounded-lg" />
+                )}
               </div>
             )}
           </CardContent>
