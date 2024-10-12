@@ -47,6 +47,8 @@ st.write("\n\n")
 
 st.subheader('Step 2: Test message reception')
 st.write("Make sure to save your phone number below to receive notifications")
+st.write("Add a **1** before the country code number")
+st.write("Example: +52**1**7128767898")
 st.session_state.phone_number = st.text_input("Add or update phone number:")
 if st.button("Save Phone Number and Test"):
     st.session_state.phone_number = str(st.session_state.phone_number)
