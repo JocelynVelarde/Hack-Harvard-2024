@@ -25,7 +25,7 @@ export default function SecurityDashboard() {
 
   const generateHeatmap = async (fileUrl) => {
     await new Promise(resolve => setTimeout(resolve, 1000))
-    return "/placeholder.svg?height=300&width=400"
+    return "https://via.placeholder.com/600x400"
   }
 
   const handleFileChange = async (event) => {
