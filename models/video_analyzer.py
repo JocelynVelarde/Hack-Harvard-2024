@@ -2,7 +2,8 @@ import requests
 import base64
 import streamlit as st
 from PIL import Image
-from video_cropper import save_img_range
+from models.video_cropper import save_img_range
+#from video_cropper import save_img_range
 from io import BytesIO
 import logging
 
@@ -90,5 +91,3 @@ def analyze_video(video_name : str, video_ext : str = 'mp4') -> str:
             return f"API request failed: {e}"
     else :
         return "No images found for this video name"
-
-print(analyze_video(video_name='shoplifting', video_ext='mp4'))
