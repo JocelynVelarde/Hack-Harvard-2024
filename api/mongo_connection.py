@@ -4,7 +4,7 @@ from pymongo import MongoClient
 import streamlit as st
 
 
-client = MongoClient(st.secrets["MONGO_URI"], tls=True, tlsAllowInvalidCertificates=True, server_api=ServerApi('1'))
+client = MongoClient(st.secrets["MONGO"]["MONGO_URI"], tls=True, tlsAllowInvalidCertificates=True, server_api=ServerApi('1'))
 
 
 import json
