@@ -5,6 +5,7 @@ from PIL import Image
 from video_cropper import save_img_range
 from io import BytesIO
 import logging
+import os
 
 def encode_image(image):
     if isinstance(image, str):
@@ -82,12 +83,21 @@ def analyze_video(video_name : str, video_ext : str = 'mp4') -> str:
 
                 logging.info(f"Output message: {output_message}")
                 
+                # DELETE IMAGES
+                for i in range(1, img_count + 1):
+                    os.remove(f'{video_name}_image_{i}.jpg')
+
                 return output_message
             else:
+                for i in range(1, img_count + 1):
+                    os.remove(f'{video_name}_image_{i}.jpg')
                 return "No response or incomplete response from API."
 
         except requests.exceptions.RequestException as e:
+            for i in range(1, img_count + 1):
+                    os.remove(f'{video_name}_image_{i}.jpg')
             return f"API request failed: {e}"
     else :
         return "No images found for this video name"
 
+print(analyze_video(video_name='shoplifting', video_ext='mp4'))
