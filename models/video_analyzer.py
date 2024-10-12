@@ -91,4 +91,3 @@ def analyze_video(video_name : str, video_ext : str = 'mp4') -> str:
     else :
         return "No images found for this video name"
 
-print(analyze_video(video_name='shoplifting', video_ext='mp4'))
