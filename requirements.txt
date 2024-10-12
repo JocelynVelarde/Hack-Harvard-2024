@@ -124,4 +124,5 @@ twilio==9.3.3
 typing_extensions==4.12.2
 tzdata==2024.2
 urllib3==2.2.3
+matplotlib
 yarl==1.15.0
