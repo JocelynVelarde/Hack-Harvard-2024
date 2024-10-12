@@ -18,7 +18,7 @@ def encode_image(image):
     else:
         raise TypeError("Expected str or PIL.Image.Image")
 
-def analyze_video(video_name : str, video_ext : str = 'mp4') -> str:
+def analyze_video(video_name : str, video_ext : str = 'mp4', objectContext: str, facialContext: str) -> str:
     img_count = save_img_range(f'{video_name}.{video_ext}', 0, 4, 0.75, '.', f'{video_name}_image')
 
     logging.info(f"Image count: {img_count}")
@@ -57,7 +57,9 @@ def analyze_video(video_name : str, video_ext : str = 'mp4') -> str:
                 "content": [
                     {
                         "type": "text",
-                        "text": "Based off the provided video and information from different part of the system, can you tell if there are any suspicious or dangerous activities happening in regards to shoplifting? "  
+                        "text": f"Based off the provided video and information from different part of the system, can you tell if there are any suspicious or dangerous activities happening in regards to shoplifting? 
+                                {objectContext} is the context of the objects in the video and {facialContext} is the context of the faces in the video. Please include this information in your analysis."  
+
                     }
                 ] + encoded_images
             }

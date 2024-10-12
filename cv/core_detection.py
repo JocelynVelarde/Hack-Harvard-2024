@@ -18,7 +18,7 @@ class ShopliftingDetector:
         self.event_frame_count = 0
         self.event_clip_writer = None
 
-    def process_video(self, video_path, output_video_path, confidence_threshold=40, overlap_threshold=30):
+    def process_video(self, video_path, output_video_path, confidence_threshold=30, overlap_threshold=30):
         cap = cv2.VideoCapture(video_path)
         frame_count = 0
 
