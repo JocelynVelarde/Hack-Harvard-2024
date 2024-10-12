@@ -3,9 +3,9 @@ import base64
 import streamlit as st
 from PIL import Image
 from models.video_cropper import save_img_range
-#from video_cropper import save_img_range
 from io import BytesIO
 import logging
+import os
 
 def encode_image(image):
     if isinstance(image, str):
@@ -13,7 +13,7 @@ def encode_image(image):
             return base64.b64encode(image_file.read()).decode('utf-8')
     elif isinstance(image, Image.Image): 
         buffered = BytesIO()
-        image.save(buffered, format="JPEG")  # Save the image to a buffer
+        image.save(buffered, format="JPEG")
         return base64.b64encode(buffered.getvalue()).decode('utf-8')
     else:
         raise TypeError("Expected str or PIL.Image.Image")
@@ -29,11 +29,10 @@ def analyze_video(video_name : str, video_ext : str = 'mp4') -> str:
             images.append(Image.open(f'{video_name}_image_{i}.jpg'))
 
         logging.info(f"Images: {images}")
-        # Ensure `images` is a list, even if it's a single image
+
         if not isinstance(images, list):
             images = [images]
         
-        # Encode each image
         encoded_images = [
             {
                 "type": "image_url",
@@ -73,7 +72,7 @@ def analyze_video(video_name : str, video_ext : str = 'mp4') -> str:
 
         try:
             response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
-            response.raise_for_status()  # Raises an error for bad responses (4xx or 5xx)
+            response.raise_for_status()
             response_data = response.json()
 
             logging.info(f"Response data: {response_data}")
@@ -83,12 +82,18 @@ def analyze_video(video_name : str, video_ext : str = 'mp4') -> str:
 
                 logging.info(f"Output message: {output_message}")
                 
+                for i in range(1, img_count + 1):
+                    os.remove(f'{video_name}_image_{i}.jpg')
+
                 return output_message
             else:
+                for i in range(1, img_count + 1):
+                    os.remove(f'{video_name}_image_{i}.jpg')
                 return "No response or incomplete response from API."
 
         except requests.exceptions.RequestException as e:
+            for i in range(1, img_count + 1):
+                    os.remove(f'{video_name}_image_{i}.jpg')
             return f"API request failed: {e}"
     else :
         return "No images found for this video name"
-
