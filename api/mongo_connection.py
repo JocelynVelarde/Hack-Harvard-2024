@@ -2,11 +2,11 @@
 from pymongo.server_api import ServerApi
 from pymongo import MongoClient
 import streamlit as st
-
-client = MongoClient(st.secrets["MONGO_URI"], tls=True, tlsAllowInvalidCertificates=True, server_api=ServerApi('1'))
-
+import gridfs
 import json
 from bson import ObjectId
+
+client = MongoClient(st.secrets["MONGO"]["MONGO_URI"], tls=True, tlsAllowInvalidCertificates=True, server_api=ServerApi('1'))
 
 class JSONEncoder(json.JSONEncoder):
     def default(self, o):
@@ -22,6 +22,18 @@ def insert_data(data :str, database: str, collection: str) -> str:
         result = collection.insert_one(data)
         
         print(f'Data inserted successfully with id: {result.inserted_id}')
+    except Exception as e:
+        print("Error inserting data: ", e)
+
+def insert_video(filepath: str, database: str) -> str:
+    try:
+        database =  client.get_database(database)
+        bucket = gridfs.GridFSBucket(database)
+
+        with bucket.open_upload_stream(filepath) as upload_stream:
+            upload_stream.write(open(filepath, "rb").read())
+        
+        print(f'Data inserted successfully with id: {upload_stream.filename}')
     except Exception as e:
         print("Error inserting data: ", e)
 
@@ -53,4 +65,18 @@ def get_all_data(database: str, collection: str) -> str:
     except Exception as e:
         print("Error getting data: ", e)
         return {"error": f'Error getting data {e}'}
+
+def get_video(filename: str, database: str) -> str:
+    try:
+        database =  client.get_database(database)
+        bucket = gridfs.GridFSBucket(database)
+
+        with bucket.open_download_stream_by_name(filename=filename) as download_stream:
+            data = download_stream.read()
+            with open(filename, "wb") as f:
+                f.write(data)
+        
+        print (f'Data retrieved successfully with id: {download_stream.filename}')
+    except Exception as e:
+        print("Error inserting data: ", e)
 
