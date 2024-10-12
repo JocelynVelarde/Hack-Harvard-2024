@@ -83,7 +83,6 @@ def analyze_video(video_name : str, video_ext : str = 'mp4') -> str:
 
                 logging.info(f"Output message: {output_message}")
                 
-                # DELETE IMAGES
                 for i in range(1, img_count + 1):
                     os.remove(f'{video_name}_image_{i}.jpg')
 
