@@ -17,8 +17,54 @@ def encode_image(image):
         return base64.b64encode(buffered.getvalue()).decode('utf-8')
     else:
         raise TypeError("Expected str or PIL.Image.Image")
+    
+def cloudflare_analysis(video_name : str, video_ext : str = 'mp4') -> str:
+    img_count = save_img_range(f'{video_name}.{video_ext}', 0, 4, 0.75, '.', f'{video_name}_image')
+    logging.info(f"Image count: {img_count}")
 
-def analyze_video(video_name : str, video_ext : str = 'mp4') -> str:
+    if img_count:
+        images = []
+        for i in range(1, img_count + 1):
+            images.append(Image.open(f'{video_name}_image_{i}.jpg'))
+        
+        logging.info(f"Images: {images}")
+
+        if not isinstance(images, list):
+            images = [images]
+
+        inputs = [
+            {
+                "image": encode_image(image=image), 
+                "max_tokens": 512, 
+                "temperature": 0.7, 
+                "prompt": "Analyze the content of the image.",  
+                "raw": False 
+            } for image in images
+        ]
+
+        # Getting the base64 string
+
+        account_id = st.secrets["CLOUDFLARE"]["ACCOUNT_ID"]
+
+        API_BASE_URL = f'https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/run/'
+        headers = {
+            "Authorization": f"Bearer {st.secrets['CLOUDFLARE']['API_KEY']}"
+        }
+
+        def run(model, inputs):
+            response = requests.post(f"{API_BASE_URL}{model}", headers=headers, json=inputs)
+            return response.json()
+
+        output = run("@cf/unum/uform-gen2-qwen-500m", inputs)
+
+        logging.info(f"Output: {output}")
+
+        for i in range(1, img_count + 1):
+            os.remove(f'{video_name}_image_{i}.jpg')
+
+        return output
+
+def openai_analsis(video_name : str, video_ext : str = 'mp4') -> str:
     img_count = save_img_range(f'{video_name}.{video_ext}', 0, 4, 0.75, '.', f'{video_name}_image')
 
     logging.info(f"Image count: {img_count}")
@@ -97,3 +143,18 @@ def analyze_video(video_name : str, video_ext : str = 'mp4') -> str:
             return f"API request failed: {e}"
     else :
         return "No images found for this video name"
+
+def analyze_video(video_name : str, video_ext : str = 'mp4') -> str:
+    try :
+        res = cloudflare_analysis(video_name, video_ext)
+
+        if res['errors'][0]['code'] == 5006:
+            raise Exception("Cloudflare API error occured")
+    except Exception as e:
+        logging.error(f"Error in cloudflare analysis: {e}")
+        try:
+            return openai_analsis(video_name, video_ext)
+        except Exception as e:
+            logging.error(f"Error in openai analysis: {e}")
+            return "Error in both analysis"
+    
