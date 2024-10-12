@@ -1,57 +1,41 @@
 import cv2
 from roboflow import Roboflow
 import os
+import json
 
-#API Key Stuff
-rf = Roboflow(api_key="jau6tLTx6Imi9ge2lwqf")
-project = rf.workspace().project("shoplifting-cuzf8")
-model = project.version(3).model
+class ShopliftingDetector:
+    def __init__(self, api_key_file, project_name, version_num):
+        with open(api_key_file, 'r') as f:
+            service_key = json.load(f)
+        
+        rf = Roboflow(api_key=service_key["api_key"])
+        project = rf.workspace().project(project_name)
+        self.model = project.version(version_num).model
+        self.prediction_data = []
 
-video_path = "video/shoplifting.mp4"
+    def process_video(self, video_path, confidence_threshold=40, overlap_threshold=30):
+        cap = cv2.VideoCapture(video_path)
+        frame_count = 0
 
-cap = cv2.VideoCapture(video_path)
+        while cap.isOpened():
+            ret, frame = cap.read()
+            if not ret:
+                break
 
-#Don't mess with this
-fps = cap.get(cv2.CAP_PROP_FPS)
-frame_width = int(cap.get(3))
-frame_height = int(cap.get(4))
+            temp_frame_path = f"temp_frame_{frame_count}.jpg"
+            cv2.imwrite(temp_frame_path, frame)
 
-output_path = "updatedvideo.mp4"
-out = cv2.VideoWriter(output_path, cv2.VideoWriter_fourcc(*'mp4v'), fps, (frame_width, frame_height))
+            prediction = self.model.predict(temp_frame_path, confidence=confidence_threshold, overlap=overlap_threshold).json()
 
-frame_count = 0
+            self.prediction_data.append({"frame": frame_count, "predictions": prediction['predictions']})
 
-while cap.isOpened():
-    ret, frame = cap.read()
-    if not ret:
-        break
+            os.remove(temp_frame_path)
+            frame_count += 1
 
-    temp_frame_path = f"temp_frame_{frame_count}.jpg"
-    cv2.imwrite(temp_frame_path, frame)
+        cap.release()
+        print(f"Video processed. {frame_count} frames analyzed.")
 
-    prediction = model.predict(temp_frame_path, confidence=40, overlap=30).json()
-
-    os.remove(temp_frame_path)
-
-    #Affects box size
-    for obj in prediction['predictions']:
-        x0 = int(obj['x'] - obj['width'] / 2)
-        y0 = int(obj['y'] - obj['height'] / 2)
-        x1 = int(obj['x'] + obj['width'] / 2)
-        y1 = int(obj['y'] + obj['height'] / 2)
-        label = obj['class']
-        confidence = obj['confidence']
-
-        cv2.rectangle(frame, (x0, y0), (x1, y1), (0, 255, 0), 2)
-        #Affects text size
-        cv2.putText(frame, f"{label}: {confidence:.2f}", (x0, y0 - 10),
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 255, 0), 2)
-
-    out.write(frame)
-
-    frame_count += 1
-
-cap.release()
-out.release()
-
-print(f"Processed video saved to {output_path}")
+    def get_predictions(self, formatted=False):
+        if formatted:
+            return json.dumps(self.prediction_data, indent=4)
+        return self.prediction_data
