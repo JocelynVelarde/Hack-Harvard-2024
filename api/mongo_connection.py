@@ -3,7 +3,9 @@ from pymongo.server_api import ServerApi
 from pymongo import MongoClient
 import streamlit as st
 
-client = MongoClient(st.secrets["MONGO"]["MONGO_URI"], tls=True, tlsAllowInvalidCertificates=True, server_api=ServerApi('1'))
+
+client = MongoClient(st.secrets["MONGO_URI"], tls=True, tlsAllowInvalidCertificates=True, server_api=ServerApi('1'))
+
 
 import json
 from bson import ObjectId
@@ -53,3 +55,4 @@ def get_all_data(database: str, collection: str) -> str:
     except Exception as e:
         print("Error getting data: ", e)
         return {"error": f'Error getting data {e}'}
+
