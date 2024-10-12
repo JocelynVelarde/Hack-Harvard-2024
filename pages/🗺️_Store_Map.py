@@ -63,21 +63,18 @@ st.subheader('Step 4: Add pinpoint locations of cameras')
 st.write("Add the locations of the cameras in the store to get the heatmap.")
 st.write("For our store we had 4 cameras placed at each corner.")
 
-# Plot camera locations near each corner
 camera_locations = [
-    (0.5, 0.5),  # Top-left corner
-    (store_width_in - 0.5, 0.5),  # Top-right corner
-    (0.5, store_height_in - 0.5),  # Bottom-left corner
-    (store_width_in - 0.5, store_height_in - 0.5)  # Bottom-right corner
+    (0.5, 0.5), 
+    (store_width_in - 0.5, 0.5),  
+    (0.5, store_height_in - 0.5),  
+    (store_width_in - 0.5, store_height_in - 0.5)  
 ]
 
-# Convert camera locations to pixel coordinates
 camera_locations_px = [
     (x * spacing_x, y * spacing_y) for x, y in camera_locations
 ]
 
-# Plot the camera locations
 for (x, y) in camera_locations_px:
-    ax.plot(x, y, 'k-')  # 'ro' means red color, circle marker
+    ax.plot(x, y, 'ro')  
 
 st.pyplot(fig)
