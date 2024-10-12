@@ -2,19 +2,15 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import api.mongo_connection as MongoConnection
+from algorithms.whatsapp import WhatsappSender
 
 st.set_page_config(
         page_title="SMS",
         page_icon="💬",
 )
+
 st.image('assets/mini.png', use_column_width=True)
 st.title('💬 SMS Notifications')
-
-st.divider()
-
-st.subheader('For WhatsApp Notifications')
-
-st.divider()
 
 st.write("\n\n")
 st.write("\n\n")
@@ -48,21 +44,26 @@ st.markdown(
 st.write("\n\n")
 st.write("\n\n")
 
-st.divider()
 
-st.subheader('For SMS Notifications')
-
-st.divider()
-
-
-st.subheader('Step 2: Save your phone number')
+st.subheader('Step 2: Test message reception')
 st.write("Make sure to save your phone number below to receive notifications")
+st.write("Add a **1** before the country code number")
+st.write("Example: +52**1**7128767898")
 st.session_state.phone_number = st.text_input("Add or update phone number:")
-if st.button("Save Phone Number"):
+if st.button("Save Phone Number and Test"):
     st.session_state.phone_number = str(st.session_state.phone_number)
-
     try: 
         MongoConnection.insert_data({"phone_number": st.session_state.phone_number}, "numberData", "number")
         st.success("Phone number saved!")
+        text_message = "Hello from Theft Alert! You will now receive notifications from us."
+        WhatsappSender.send_message(str(st.session_state.phone_number), text_message)
+        st.success("Message sent successfully!")
     except Exception as e:
         st.error(f"Error saving phone number: {e}")
+
+st.write("\n\n")
+st.write("\n\n")
+
+
+
+    
