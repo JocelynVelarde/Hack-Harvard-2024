@@ -5,4 +5,4 @@ st.set_page_config(
         page_icon="🚨",
 )
 
-st.write("Hello, world!")
+st.markdown("# :rainbow[Theft Alert]")
