@@ -1,0 +1,2267 @@
+[
+    {
+        "frame": 0,
+        "predictions": [
+            {
+                "x": 32.0,
+                "y": 99.5,
+                "width": 64.0,
+                "height": 119.0,
+                "confidence": 0.914628267288208,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "66e7c4a6-6f63-4a21-9a23-63ca410e6794",
+                "image_path": "temp_frame_0.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 210.5,
+                "y": 149.0,
+                "width": 93.0,
+                "height": 108.0,
+                "confidence": 0.9013378024101257,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "8806e443-1e55-4130-9233-981b0ac32c4b",
+                "image_path": "temp_frame_0.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 1,
+        "predictions": [
+            {
+                "x": 32.5,
+                "y": 99.5,
+                "width": 65.0,
+                "height": 119.0,
+                "confidence": 0.9070205688476562,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "06c0e4fc-6696-4ace-a9b6-6e30b76c478f",
+                "image_path": "temp_frame_1.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 211.0,
+                "y": 148.5,
+                "width": 94.0,
+                "height": 105.0,
+                "confidence": 0.8886067867279053,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "2f132bf9-3cf2-4405-8cf4-7e7cab1fffc5",
+                "image_path": "temp_frame_1.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 2,
+        "predictions": [
+            {
+                "x": 32.5,
+                "y": 99.5,
+                "width": 65.0,
+                "height": 119.0,
+                "confidence": 0.9164888262748718,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "2e799405-9e93-4042-b984-9d5cdea3a15c",
+                "image_path": "temp_frame_2.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 211.0,
+                "y": 149.5,
+                "width": 96.0,
+                "height": 109.0,
+                "confidence": 0.8788795471191406,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "c8736d3d-a5c2-41bb-a585-3575f7ac4277",
+                "image_path": "temp_frame_2.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 3,
+        "predictions": [
+            {
+                "x": 32.5,
+                "y": 99.5,
+                "width": 65.0,
+                "height": 119.0,
+                "confidence": 0.9123391509056091,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "2c4ed9b0-332f-4541-be6a-3288b24d671f",
+                "image_path": "temp_frame_3.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 211.5,
+                "y": 149.5,
+                "width": 95.0,
+                "height": 109.0,
+                "confidence": 0.878702700138092,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "50acc998-3fc9-4ff0-a109-df499d4c24d7",
+                "image_path": "temp_frame_3.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 4,
+        "predictions": [
+            {
+                "x": 32.5,
+                "y": 99.5,
+                "width": 65.0,
+                "height": 119.0,
+                "confidence": 0.9109288454055786,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "87f0fd1e-0b46-4a6e-a45d-303e7ba73de7",
+                "image_path": "temp_frame_4.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 213.0,
+                "y": 150.0,
+                "width": 98.0,
+                "height": 108.0,
+                "confidence": 0.8803859353065491,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "4037824d-8ded-4ae4-91b3-44c5c4d57b86",
+                "image_path": "temp_frame_4.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 5,
+        "predictions": [
+            {
+                "x": 32.5,
+                "y": 99.5,
+                "width": 65.0,
+                "height": 119.0,
+                "confidence": 0.8986831903457642,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "86f164d5-8feb-43e1-96e4-a00dcddf4060",
+                "image_path": "temp_frame_5.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 213.0,
+                "y": 149.5,
+                "width": 96.0,
+                "height": 109.0,
+                "confidence": 0.8824175000190735,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "bf82165e-8193-49c8-8fcf-150281ba9121",
+                "image_path": "temp_frame_5.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 6,
+        "predictions": [
+            {
+                "x": 32.5,
+                "y": 99.5,
+                "width": 65.0,
+                "height": 119.0,
+                "confidence": 0.9029862284660339,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "7d7dd4c2-6fed-4d3f-8e8d-93e283f1e1d9",
+                "image_path": "temp_frame_6.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 213.0,
+                "y": 150.0,
+                "width": 98.0,
+                "height": 108.0,
+                "confidence": 0.8649462461471558,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "ee8a30e7-aeac-44e7-93e6-f0162ad5f959",
+                "image_path": "temp_frame_6.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 7,
+        "predictions": [
+            {
+                "x": 32.5,
+                "y": 99.0,
+                "width": 65.0,
+                "height": 120.0,
+                "confidence": 0.9015250205993652,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "a195c31b-0df3-4ce6-bf78-26cb75080a88",
+                "image_path": "temp_frame_7.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 213.5,
+                "y": 149.5,
+                "width": 99.0,
+                "height": 107.0,
+                "confidence": 0.8723762035369873,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "26795efe-feb8-40f4-b2d7-b9353bebf098",
+                "image_path": "temp_frame_7.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 8,
+        "predictions": [
+            {
+                "x": 32.5,
+                "y": 98.5,
+                "width": 65.0,
+                "height": 121.0,
+                "confidence": 0.8900220394134521,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "22f7b97a-f99d-4953-a6d4-1dc234fee818",
+                "image_path": "temp_frame_8.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 214.0,
+                "y": 150.0,
+                "width": 98.0,
+                "height": 108.0,
+                "confidence": 0.8803722262382507,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "64ffa283-cd0a-4739-b34b-21791e88ede0",
+                "image_path": "temp_frame_8.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 9,
+        "predictions": [
+            {
+                "x": 32.5,
+                "y": 99.0,
+                "width": 65.0,
+                "height": 120.0,
+                "confidence": 0.8944690823554993,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "25069456-1cd7-4887-83cb-eed855a27ad4",
+                "image_path": "temp_frame_9.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 214.0,
+                "y": 149.5,
+                "width": 98.0,
+                "height": 107.0,
+                "confidence": 0.8890283107757568,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "e949a553-9cab-4be2-9669-2a09803e0439",
+                "image_path": "temp_frame_9.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 10,
+        "predictions": [
+            {
+                "x": 214.5,
+                "y": 150.0,
+                "width": 99.0,
+                "height": 108.0,
+                "confidence": 0.893319308757782,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "f6e1b75b-ed7d-4781-b19c-f0b1cc838d4c",
+                "image_path": "temp_frame_10.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 32.5,
+                "y": 98.5,
+                "width": 65.0,
+                "height": 121.0,
+                "confidence": 0.8895962238311768,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "73dd82a9-bc2b-44cd-a1d9-fff4f1d2d6f8",
+                "image_path": "temp_frame_10.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 11,
+        "predictions": [
+            {
+                "x": 32.5,
+                "y": 98.5,
+                "width": 65.0,
+                "height": 121.0,
+                "confidence": 0.8953897356987,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "49507f2f-2fb9-473a-abf8-62ae4570574e",
+                "image_path": "temp_frame_11.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 214.5,
+                "y": 150.0,
+                "width": 99.0,
+                "height": 106.0,
+                "confidence": 0.8873927593231201,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "0e53895f-9c70-4779-ae62-d7f88ea9bc0b",
+                "image_path": "temp_frame_11.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 228.0,
+                "y": 172.0,
+                "width": 52.0,
+                "height": 60.0,
+                "confidence": 0.49469250440597534,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "7e8f6467-8506-42f4-b422-28f874cd8e79",
+                "image_path": "temp_frame_11.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 12,
+        "predictions": [
+            {
+                "x": 32.5,
+                "y": 99.0,
+                "width": 65.0,
+                "height": 120.0,
+                "confidence": 0.8900704383850098,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "a950bc19-319c-466b-8524-8513c848914a",
+                "image_path": "temp_frame_12.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 214.5,
+                "y": 150.0,
+                "width": 99.0,
+                "height": 108.0,
+                "confidence": 0.8825170993804932,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "f6af0197-396a-4e0c-8f79-cf2f4c0c8595",
+                "image_path": "temp_frame_12.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 228.0,
+                "y": 172.5,
+                "width": 52.0,
+                "height": 59.0,
+                "confidence": 0.613867998123169,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "bbf6f62e-b975-4b67-a510-d7d9f11d0094",
+                "image_path": "temp_frame_12.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 13,
+        "predictions": [
+            {
+                "x": 32.5,
+                "y": 99.5,
+                "width": 65.0,
+                "height": 121.0,
+                "confidence": 0.8671109676361084,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "22cee747-526e-4995-812f-49c8582a24f8",
+                "image_path": "temp_frame_13.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 214.5,
+                "y": 150.5,
+                "width": 99.0,
+                "height": 107.0,
+                "confidence": 0.8586913347244263,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "b5a75add-ef99-4c2d-b225-fa5f53f40b26",
+                "image_path": "temp_frame_13.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 227.5,
+                "y": 173.0,
+                "width": 53.0,
+                "height": 60.0,
+                "confidence": 0.622442364692688,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "7211d855-23d5-42e6-be78-cb13671d7578",
+                "image_path": "temp_frame_13.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 14,
+        "predictions": [
+            {
+                "x": 32.5,
+                "y": 99.0,
+                "width": 65.0,
+                "height": 120.0,
+                "confidence": 0.8814417123794556,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "9a2b0bb4-0d0f-48d8-b4f2-627e9d61bd7c",
+                "image_path": "temp_frame_14.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 215.0,
+                "y": 150.5,
+                "width": 100.0,
+                "height": 107.0,
+                "confidence": 0.8592385053634644,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "952adf5a-89f3-4e33-99f9-f3619293fbf5",
+                "image_path": "temp_frame_14.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 228.0,
+                "y": 172.5,
+                "width": 54.0,
+                "height": 61.0,
+                "confidence": 0.5601238012313843,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "085a669f-c2a3-4005-b7b5-aca12e2e5da8",
+                "image_path": "temp_frame_14.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 15,
+        "predictions": [
+            {
+                "x": 214.5,
+                "y": 150.0,
+                "width": 99.0,
+                "height": 106.0,
+                "confidence": 0.8773820400238037,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "14b4775f-7df7-477c-b2f4-7d9e4d7f118c",
+                "image_path": "temp_frame_15.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 32.5,
+                "y": 98.5,
+                "width": 65.0,
+                "height": 121.0,
+                "confidence": 0.8607720136642456,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "5f760dfd-cfc2-4496-b179-449abdbaecbf",
+                "image_path": "temp_frame_15.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 227.5,
+                "y": 172.5,
+                "width": 53.0,
+                "height": 61.0,
+                "confidence": 0.4505024552345276,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "4fa5bfb0-a9d0-4865-8470-1511601801b0",
+                "image_path": "temp_frame_15.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 16,
+        "predictions": [
+            {
+                "x": 214.0,
+                "y": 150.0,
+                "width": 98.0,
+                "height": 106.0,
+                "confidence": 0.8777254819869995,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "1b63e4b5-b2d2-4ee3-9576-19c01bc8a7b9",
+                "image_path": "temp_frame_16.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 32.0,
+                "y": 98.5,
+                "width": 64.0,
+                "height": 121.0,
+                "confidence": 0.8423378467559814,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "44d48e76-b34f-4bc6-b286-f63e480d1e59",
+                "image_path": "temp_frame_16.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 227.5,
+                "y": 172.5,
+                "width": 53.0,
+                "height": 61.0,
+                "confidence": 0.5498742461204529,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "9e788bad-6259-4293-be24-240afbdd2a84",
+                "image_path": "temp_frame_16.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 17,
+        "predictions": [
+            {
+                "x": 214.0,
+                "y": 150.5,
+                "width": 98.0,
+                "height": 107.0,
+                "confidence": 0.8748813271522522,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "716a9dca-a585-49fc-b93d-905eff9f4722",
+                "image_path": "temp_frame_17.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 32.5,
+                "y": 97.5,
+                "width": 65.0,
+                "height": 123.0,
+                "confidence": 0.7070039510726929,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "6114844c-425e-4cc2-a1dd-f9dcb981396c",
+                "image_path": "temp_frame_17.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 228.0,
+                "y": 173.5,
+                "width": 54.0,
+                "height": 59.0,
+                "confidence": 0.6878888607025146,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "0d46d35e-4ac5-4ed4-a25d-9f3ef26201e2",
+                "image_path": "temp_frame_17.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 18,
+        "predictions": [
+            {
+                "x": 214.5,
+                "y": 150.5,
+                "width": 99.0,
+                "height": 107.0,
+                "confidence": 0.830066442489624,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "8fbc2c9b-5b4a-4b12-b492-78f45b5818be",
+                "image_path": "temp_frame_18.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 228.0,
+                "y": 173.5,
+                "width": 54.0,
+                "height": 57.0,
+                "confidence": 0.6757123470306396,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "2bf108cb-4f52-461f-96c9-0961b03618ac",
+                "image_path": "temp_frame_18.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 32.5,
+                "y": 97.5,
+                "width": 65.0,
+                "height": 123.0,
+                "confidence": 0.6546837091445923,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "f5cae206-415d-4747-bb4c-9957d3b058e3",
+                "image_path": "temp_frame_18.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 19,
+        "predictions": [
+            {
+                "x": 214.5,
+                "y": 150.5,
+                "width": 99.0,
+                "height": 107.0,
+                "confidence": 0.8069249987602234,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "73560248-8569-4394-aee1-317e3bf2d104",
+                "image_path": "temp_frame_19.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 227.5,
+                "y": 173.5,
+                "width": 53.0,
+                "height": 57.0,
+                "confidence": 0.7143409252166748,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "7f368760-2dc9-4c78-a40c-3f9d62721251",
+                "image_path": "temp_frame_19.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 32.5,
+                "y": 97.0,
+                "width": 65.0,
+                "height": 124.0,
+                "confidence": 0.6732972264289856,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "ffadbd18-47b8-4e2b-a152-9129ed0d9f82",
+                "image_path": "temp_frame_19.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 20,
+        "predictions": [
+            {
+                "x": 214.5,
+                "y": 150.5,
+                "width": 99.0,
+                "height": 107.0,
+                "confidence": 0.7998431921005249,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "caaa2f88-f8c2-4960-9cd6-1b4b15894d97",
+                "image_path": "temp_frame_20.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 228.5,
+                "y": 173.5,
+                "width": 51.0,
+                "height": 57.0,
+                "confidence": 0.7762401700019836,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "1674aaec-875a-4da2-a15a-580c26beb235",
+                "image_path": "temp_frame_20.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 32.5,
+                "y": 97.0,
+                "width": 65.0,
+                "height": 124.0,
+                "confidence": 0.6390705108642578,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "c1bc4972-ccbb-46aa-b651-79ead1501d0f",
+                "image_path": "temp_frame_20.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 21,
+        "predictions": [
+            {
+                "x": 228.0,
+                "y": 173.0,
+                "width": 52.0,
+                "height": 58.0,
+                "confidence": 0.7762805819511414,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "69b8277c-73cb-4c9b-9ed0-01d67b4596d7",
+                "image_path": "temp_frame_21.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 215.0,
+                "y": 150.5,
+                "width": 100.0,
+                "height": 107.0,
+                "confidence": 0.7106972932815552,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "f95869da-2ae8-4b71-9592-472e87c5f380",
+                "image_path": "temp_frame_21.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 32.5,
+                "y": 97.0,
+                "width": 65.0,
+                "height": 124.0,
+                "confidence": 0.5491005778312683,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "61bb9101-46e0-462a-b6ce-1d2addc5d5e6",
+                "image_path": "temp_frame_21.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 22,
+        "predictions": [
+            {
+                "x": 228.0,
+                "y": 172.5,
+                "width": 52.0,
+                "height": 59.0,
+                "confidence": 0.7336719036102295,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "33b7264d-569b-43ad-b21c-3691ff81d6c4",
+                "image_path": "temp_frame_22.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 214.0,
+                "y": 150.5,
+                "width": 100.0,
+                "height": 107.0,
+                "confidence": 0.6929373741149902,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "df297d24-b9b4-4727-832c-4f87e1879bba",
+                "image_path": "temp_frame_22.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 32.5,
+                "y": 97.0,
+                "width": 65.0,
+                "height": 124.0,
+                "confidence": 0.6070290207862854,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "740026ad-e000-4bc3-b521-6666bec2fb66",
+                "image_path": "temp_frame_22.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 23,
+        "predictions": [
+            {
+                "x": 228.5,
+                "y": 173.0,
+                "width": 51.0,
+                "height": 58.0,
+                "confidence": 0.6843997836112976,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "1ce2fe5c-0646-4d0e-a7d8-64f910fdef3c",
+                "image_path": "temp_frame_23.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 32.5,
+                "y": 97.0,
+                "width": 65.0,
+                "height": 122.0,
+                "confidence": 0.6225149035453796,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "24595dde-9496-4674-b65b-c7e3c575c15c",
+                "image_path": "temp_frame_23.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 213.5,
+                "y": 150.0,
+                "width": 99.0,
+                "height": 106.0,
+                "confidence": 0.6208618879318237,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "17649659-46b3-44f4-aa25-0fb8aa84ac60",
+                "image_path": "temp_frame_23.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 24,
+        "predictions": [
+            {
+                "x": 228.5,
+                "y": 173.5,
+                "width": 51.0,
+                "height": 57.0,
+                "confidence": 0.7693287134170532,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "348d0aeb-71bf-4226-bb41-383371ee2fc4",
+                "image_path": "temp_frame_24.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 32.5,
+                "y": 98.0,
+                "width": 65.0,
+                "height": 122.0,
+                "confidence": 0.6465475559234619,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "08d0f81d-4514-4076-95ec-0b499464b30d",
+                "image_path": "temp_frame_24.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 213.0,
+                "y": 150.0,
+                "width": 98.0,
+                "height": 108.0,
+                "confidence": 0.48235294222831726,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "c40f96fa-0a34-48b6-a296-fa355a742292",
+                "image_path": "temp_frame_24.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 25,
+        "predictions": [
+            {
+                "x": 228.0,
+                "y": 174.0,
+                "width": 52.0,
+                "height": 58.0,
+                "confidence": 0.6896726489067078,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "f53fdd8c-5645-4b1f-9025-625e525230fd",
+                "image_path": "temp_frame_25.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 32.5,
+                "y": 97.5,
+                "width": 65.0,
+                "height": 123.0,
+                "confidence": 0.6610536575317383,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "096a12d4-dd5a-4992-b360-187c7105c167",
+                "image_path": "temp_frame_25.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 213.5,
+                "y": 151.0,
+                "width": 97.0,
+                "height": 108.0,
+                "confidence": 0.43555647134780884,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "9606156f-b8a1-4121-aa13-362af0e694f0",
+                "image_path": "temp_frame_25.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 26,
+        "predictions": [
+            {
+                "x": 228.0,
+                "y": 173.5,
+                "width": 52.0,
+                "height": 59.0,
+                "confidence": 0.7022236585617065,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "64268fe4-7d90-47e4-a569-d88ff3cb4b5d",
+                "image_path": "temp_frame_26.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 213.0,
+                "y": 150.0,
+                "width": 98.0,
+                "height": 108.0,
+                "confidence": 0.6784422397613525,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "658320be-0df6-44ea-a022-1b703abd3ed8",
+                "image_path": "temp_frame_26.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 32.5,
+                "y": 97.5,
+                "width": 65.0,
+                "height": 123.0,
+                "confidence": 0.5911568999290466,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "b9812415-3c39-474c-8d75-a15bdbc78e39",
+                "image_path": "temp_frame_26.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 27,
+        "predictions": [
+            {
+                "x": 213.5,
+                "y": 150.0,
+                "width": 97.0,
+                "height": 108.0,
+                "confidence": 0.8325037360191345,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "8e7f5fe4-f8a2-4bc4-bb4f-643743a0d12b",
+                "image_path": "temp_frame_27.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 32.5,
+                "y": 97.5,
+                "width": 65.0,
+                "height": 123.0,
+                "confidence": 0.6341977715492249,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "260b54e9-89a5-46a4-9e5f-8fec679c5a4a",
+                "image_path": "temp_frame_27.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 228.0,
+                "y": 172.5,
+                "width": 52.0,
+                "height": 63.0,
+                "confidence": 0.4645889401435852,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "e1cd3aa9-fe8d-4477-86f6-c683d7438622",
+                "image_path": "temp_frame_27.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 28,
+        "predictions": [
+            {
+                "x": 213.0,
+                "y": 150.0,
+                "width": 96.0,
+                "height": 108.0,
+                "confidence": 0.8480314016342163,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "0b561415-757f-4d85-b279-be1a0deda823",
+                "image_path": "temp_frame_28.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 32.5,
+                "y": 98.0,
+                "width": 65.0,
+                "height": 122.0,
+                "confidence": 0.6613322496414185,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "b940af04-6a23-487d-a1d1-802166a5958b",
+                "image_path": "temp_frame_28.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 29,
+        "predictions": [
+            {
+                "x": 213.0,
+                "y": 150.0,
+                "width": 96.0,
+                "height": 108.0,
+                "confidence": 0.8611932992935181,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "5e53bf00-0758-470a-94fe-98c46f7a261a",
+                "image_path": "temp_frame_29.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 32.5,
+                "y": 98.0,
+                "width": 65.0,
+                "height": 122.0,
+                "confidence": 0.724113941192627,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "a8a08f48-9f6b-495e-88fd-dc4f1800310d",
+                "image_path": "temp_frame_29.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 228.0,
+                "y": 171.5,
+                "width": 52.0,
+                "height": 63.0,
+                "confidence": 0.5322905778884888,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "0519b6f2-4fa3-4d89-b98a-c275ba66d355",
+                "image_path": "temp_frame_29.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 30,
+        "predictions": [
+            {
+                "x": 212.5,
+                "y": 150.0,
+                "width": 97.0,
+                "height": 108.0,
+                "confidence": 0.8712835311889648,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "c52a519d-66e9-4f8b-9534-64b3cd85da73",
+                "image_path": "temp_frame_30.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 32.5,
+                "y": 98.5,
+                "width": 65.0,
+                "height": 121.0,
+                "confidence": 0.7249755859375,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "e3a89a99-933e-42e6-bd9e-4a82587be62c",
+                "image_path": "temp_frame_30.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 31,
+        "predictions": [
+            {
+                "x": 211.5,
+                "y": 150.0,
+                "width": 95.0,
+                "height": 108.0,
+                "confidence": 0.8314986824989319,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "2c6e3afe-c1f0-43d2-8efd-d22782e3f7ff",
+                "image_path": "temp_frame_31.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 32.5,
+                "y": 99.0,
+                "width": 65.0,
+                "height": 120.0,
+                "confidence": 0.6834381818771362,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "ddcc5edf-3331-4807-95d3-912b5cd48e10",
+                "image_path": "temp_frame_31.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 228.0,
+                "y": 171.0,
+                "width": 54.0,
+                "height": 66.0,
+                "confidence": 0.41244402527809143,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "a48f4d22-f0ee-413c-a052-a509ef953df2",
+                "image_path": "temp_frame_31.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 32,
+        "predictions": [
+            {
+                "x": 211.5,
+                "y": 149.0,
+                "width": 95.0,
+                "height": 108.0,
+                "confidence": 0.639135479927063,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "ba43dfe0-53d0-4f67-a965-15e2ee1f088c",
+                "image_path": "temp_frame_32.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 228.5,
+                "y": 172.5,
+                "width": 55.0,
+                "height": 67.0,
+                "confidence": 0.5106289386749268,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "e5c23dca-2043-4f5b-b4f1-112080962901",
+                "image_path": "temp_frame_32.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 33,
+        "predictions": [
+            {
+                "x": 211.5,
+                "y": 149.5,
+                "width": 95.0,
+                "height": 109.0,
+                "confidence": 0.5934766530990601,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "3a0c8f2c-f25b-4670-9f27-02d6ca81d35f",
+                "image_path": "temp_frame_33.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 228.5,
+                "y": 173.0,
+                "width": 53.0,
+                "height": 64.0,
+                "confidence": 0.5326657891273499,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "04d8be52-4580-4cc4-a548-d6b69d5de132",
+                "image_path": "temp_frame_33.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 34,
+        "predictions": [
+            {
+                "x": 211.5,
+                "y": 149.5,
+                "width": 95.0,
+                "height": 109.0,
+                "confidence": 0.7580934762954712,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "8676241d-2e72-459a-8db3-429ff5a7e2d9",
+                "image_path": "temp_frame_34.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 228.0,
+                "y": 173.0,
+                "width": 52.0,
+                "height": 64.0,
+                "confidence": 0.516473650932312,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "d7364e5e-7bde-4bee-a4db-05eccf8d8370",
+                "image_path": "temp_frame_34.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 35,
+        "predictions": [
+            {
+                "x": 212.0,
+                "y": 149.5,
+                "width": 96.0,
+                "height": 109.0,
+                "confidence": 0.674866259098053,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "a0dbe4ad-407f-4ecd-991f-0863745ca329",
+                "image_path": "temp_frame_35.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 227.5,
+                "y": 172.5,
+                "width": 53.0,
+                "height": 61.0,
+                "confidence": 0.5402964353561401,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "a9471167-9b3a-421b-98ac-874118247383",
+                "image_path": "temp_frame_35.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 36,
+        "predictions": [
+            {
+                "x": 227.0,
+                "y": 173.0,
+                "width": 54.0,
+                "height": 60.0,
+                "confidence": 0.4652043581008911,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "698f0b41-0ba4-4486-8951-6b96471eef63",
+                "image_path": "temp_frame_36.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 37,
+        "predictions": [
+            {
+                "x": 227.5,
+                "y": 173.0,
+                "width": 53.0,
+                "height": 60.0,
+                "confidence": 0.6070635914802551,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "4288dd7b-0079-49be-95b8-c714152a53c2",
+                "image_path": "temp_frame_37.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 38,
+        "predictions": [
+            {
+                "x": 227.5,
+                "y": 174.0,
+                "width": 55.0,
+                "height": 60.0,
+                "confidence": 0.4483253061771393,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "d2976e7b-1852-4c09-a259-8b9c99c9916d",
+                "image_path": "temp_frame_38.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 39,
+        "predictions": []
+    },
+    {
+        "frame": 40,
+        "predictions": []
+    },
+    {
+        "frame": 41,
+        "predictions": [
+            {
+                "x": 228.0,
+                "y": 174.0,
+                "width": 56.0,
+                "height": 62.0,
+                "confidence": 0.4850991368293762,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "b1a011bf-ef26-4d3c-ba5f-076bb90e8799",
+                "image_path": "temp_frame_41.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 42,
+        "predictions": []
+    },
+    {
+        "frame": 43,
+        "predictions": []
+    },
+    {
+        "frame": 44,
+        "predictions": []
+    },
+    {
+        "frame": 45,
+        "predictions": []
+    },
+    {
+        "frame": 46,
+        "predictions": []
+    },
+    {
+        "frame": 47,
+        "predictions": []
+    },
+    {
+        "frame": 48,
+        "predictions": []
+    },
+    {
+        "frame": 49,
+        "predictions": []
+    },
+    {
+        "frame": 50,
+        "predictions": []
+    },
+    {
+        "frame": 51,
+        "predictions": []
+    },
+    {
+        "frame": 52,
+        "predictions": []
+    },
+    {
+        "frame": 53,
+        "predictions": []
+    },
+    {
+        "frame": 54,
+        "predictions": []
+    },
+    {
+        "frame": 55,
+        "predictions": []
+    },
+    {
+        "frame": 56,
+        "predictions": []
+    },
+    {
+        "frame": 57,
+        "predictions": [
+            {
+                "x": 187.5,
+                "y": 143.5,
+                "width": 45.0,
+                "height": 39.0,
+                "confidence": 0.4822022318840027,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "d2849452-ed7f-4e95-8a43-8ac0c7c623e2",
+                "image_path": "temp_frame_57.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 58,
+        "predictions": [
+            {
+                "x": 185.5,
+                "y": 144.0,
+                "width": 43.0,
+                "height": 38.0,
+                "confidence": 0.5139015913009644,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "febf102f-090a-4545-8fe7-30f8d8c8e5e0",
+                "image_path": "temp_frame_58.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 59,
+        "predictions": [
+            {
+                "x": 185.5,
+                "y": 143.0,
+                "width": 43.0,
+                "height": 36.0,
+                "confidence": 0.4564146101474762,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "d0bc94e7-7c07-40df-8726-d25aed149050",
+                "image_path": "temp_frame_59.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 60,
+        "predictions": [
+            {
+                "x": 183.0,
+                "y": 137.5,
+                "width": 50.0,
+                "height": 41.0,
+                "confidence": 0.43529847264289856,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "8852c278-23fb-4356-8827-e7d55d488e39",
+                "image_path": "temp_frame_60.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 61,
+        "predictions": [
+            {
+                "x": 179.5,
+                "y": 137.5,
+                "width": 51.0,
+                "height": 41.0,
+                "confidence": 0.40390899777412415,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "40d7192e-0040-4f1f-b605-2b84cb7d3ba5",
+                "image_path": "temp_frame_61.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 62,
+        "predictions": []
+    },
+    {
+        "frame": 63,
+        "predictions": []
+    },
+    {
+        "frame": 64,
+        "predictions": []
+    },
+    {
+        "frame": 65,
+        "predictions": []
+    },
+    {
+        "frame": 66,
+        "predictions": [
+            {
+                "x": 191.5,
+                "y": 143.5,
+                "width": 53.0,
+                "height": 43.0,
+                "confidence": 0.4610331952571869,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "754a03dc-db07-4c80-8eed-3d88ee68d75d",
+                "image_path": "temp_frame_66.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 67,
+        "predictions": [
+            {
+                "x": 192.5,
+                "y": 143.0,
+                "width": 53.0,
+                "height": 44.0,
+                "confidence": 0.46627742052078247,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "71b12305-36a4-454d-802d-67d616a71df7",
+                "image_path": "temp_frame_67.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 68,
+        "predictions": []
+    },
+    {
+        "frame": 69,
+        "predictions": []
+    },
+    {
+        "frame": 70,
+        "predictions": [
+            {
+                "x": 188.5,
+                "y": 141.5,
+                "width": 53.0,
+                "height": 43.0,
+                "confidence": 0.4454006254673004,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "4fe30472-7286-4ed7-8a0a-08d7753a796e",
+                "image_path": "temp_frame_70.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 71,
+        "predictions": []
+    },
+    {
+        "frame": 72,
+        "predictions": []
+    },
+    {
+        "frame": 73,
+        "predictions": [
+            {
+                "x": 198.5,
+                "y": 144.5,
+                "width": 53.0,
+                "height": 45.0,
+                "confidence": 0.46890994906425476,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "567d54d6-6d9e-4313-a4f0-45bc34b1f3e9",
+                "image_path": "temp_frame_73.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 74,
+        "predictions": [
+            {
+                "x": 193.0,
+                "y": 144.5,
+                "width": 52.0,
+                "height": 47.0,
+                "confidence": 0.583020806312561,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "a961aae8-e180-4b44-a40e-06c4e2e45aa7",
+                "image_path": "temp_frame_74.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 75,
+        "predictions": [
+            {
+                "x": 185.5,
+                "y": 132.0,
+                "width": 41.0,
+                "height": 34.0,
+                "confidence": 0.4033530652523041,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "a8873c15-5f9a-468c-967e-b1b4f453d467",
+                "image_path": "temp_frame_75.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 76,
+        "predictions": [
+            {
+                "x": 183.0,
+                "y": 131.0,
+                "width": 42.0,
+                "height": 34.0,
+                "confidence": 0.47428736090660095,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "f9881b3f-7db4-40e6-94c7-47b9751fb55f",
+                "image_path": "temp_frame_76.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 77,
+        "predictions": [
+            {
+                "x": 183.0,
+                "y": 130.5,
+                "width": 40.0,
+                "height": 33.0,
+                "confidence": 0.4901311695575714,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "4b22fef6-c225-4b8b-9ef1-acfd90c4f83d",
+                "image_path": "temp_frame_77.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 78,
+        "predictions": [
+            {
+                "x": 181.0,
+                "y": 130.0,
+                "width": 42.0,
+                "height": 34.0,
+                "confidence": 0.49166232347488403,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "55c43f41-32be-4381-934e-9bf50f8a218e",
+                "image_path": "temp_frame_78.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 79,
+        "predictions": [
+            {
+                "x": 180.5,
+                "y": 130.5,
+                "width": 43.0,
+                "height": 35.0,
+                "confidence": 0.49733981490135193,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "331542b5-adea-442f-9883-ad39bfbbd212",
+                "image_path": "temp_frame_79.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 80,
+        "predictions": [
+            {
+                "x": 180.5,
+                "y": 130.0,
+                "width": 41.0,
+                "height": 34.0,
+                "confidence": 0.5504881143569946,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "49513c33-6d13-49b5-8ad4-d4f9b1f95329",
+                "image_path": "temp_frame_80.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 81,
+        "predictions": [
+            {
+                "x": 180.5,
+                "y": 130.5,
+                "width": 41.0,
+                "height": 33.0,
+                "confidence": 0.5777687430381775,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "0fff90c8-b107-44ee-ac33-bab7b912cb6d",
+                "image_path": "temp_frame_81.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 82,
+        "predictions": [
+            {
+                "x": 180.5,
+                "y": 130.0,
+                "width": 41.0,
+                "height": 34.0,
+                "confidence": 0.5555412769317627,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "f7eb129f-e6d4-4b1f-9237-838c7a5218f6",
+                "image_path": "temp_frame_82.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 83,
+        "predictions": [
+            {
+                "x": 178.5,
+                "y": 129.0,
+                "width": 41.0,
+                "height": 34.0,
+                "confidence": 0.529287576675415,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "cff6c236-076d-4766-baa9-6c76d093fbef",
+                "image_path": "temp_frame_83.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 84,
+        "predictions": [
+            {
+                "x": 180.5,
+                "y": 130.0,
+                "width": 39.0,
+                "height": 34.0,
+                "confidence": 0.4612862765789032,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "5ee77ecf-5b78-41d6-8e33-ce2a5e022fdf",
+                "image_path": "temp_frame_84.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 85,
+        "predictions": [
+            {
+                "x": 176.5,
+                "y": 128.5,
+                "width": 39.0,
+                "height": 35.0,
+                "confidence": 0.5499838590621948,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "ceb956bc-e4d8-4540-b9ff-4dec41101343",
+                "image_path": "temp_frame_85.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 86,
+        "predictions": [
+            {
+                "x": 176.5,
+                "y": 129.0,
+                "width": 39.0,
+                "height": 34.0,
+                "confidence": 0.5350554585456848,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "d284abe8-f6b2-4d4b-8480-ff952299ddd9",
+                "image_path": "temp_frame_86.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 87,
+        "predictions": [
+            {
+                "x": 176.5,
+                "y": 128.5,
+                "width": 39.0,
+                "height": 35.0,
+                "confidence": 0.5498591065406799,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "de0245ee-bd07-440c-acf4-f40e6331c2b1",
+                "image_path": "temp_frame_87.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 88,
+        "predictions": [
+            {
+                "x": 176.0,
+                "y": 128.0,
+                "width": 40.0,
+                "height": 36.0,
+                "confidence": 0.5261198282241821,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "481623d5-ad24-4486-a4ed-9dbd454241c4",
+                "image_path": "temp_frame_88.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 89,
+        "predictions": [
+            {
+                "x": 178.5,
+                "y": 128.5,
+                "width": 39.0,
+                "height": 35.0,
+                "confidence": 0.520454466342926,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "dcae96de-89b6-491e-91f7-dc15e95aad62",
+                "image_path": "temp_frame_89.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 90,
+        "predictions": [
+            {
+                "x": 179.0,
+                "y": 128.5,
+                "width": 38.0,
+                "height": 35.0,
+                "confidence": 0.635852575302124,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "3bccd9a4-04c3-492e-bad6-87569e320780",
+                "image_path": "temp_frame_90.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 91,
+        "predictions": [
+            {
+                "x": 179.5,
+                "y": 128.5,
+                "width": 37.0,
+                "height": 35.0,
+                "confidence": 0.607016921043396,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "b1946968-69f1-4f3a-80e9-a106da5b053f",
+                "image_path": "temp_frame_91.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 92,
+        "predictions": [
+            {
+                "x": 179.5,
+                "y": 126.5,
+                "width": 39.0,
+                "height": 37.0,
+                "confidence": 0.5132555961608887,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "962b4d9f-2036-42f2-8f4f-61e2a640f691",
+                "image_path": "temp_frame_92.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 93,
+        "predictions": []
+    },
+    {
+        "frame": 94,
+        "predictions": []
+    },
+    {
+        "frame": 95,
+        "predictions": []
+    },
+    {
+        "frame": 96,
+        "predictions": []
+    },
+    {
+        "frame": 97,
+        "predictions": []
+    },
+    {
+        "frame": 98,
+        "predictions": []
+    },
+    {
+        "frame": 99,
+        "predictions": []
+    },
+    {
+        "frame": 100,
+        "predictions": []
+    },
+    {
+        "frame": 101,
+        "predictions": []
+    },
+    {
+        "frame": 102,
+        "predictions": []
+    },
+    {
+        "frame": 103,
+        "predictions": []
+    },
+    {
+        "frame": 104,
+        "predictions": []
+    },
+    {
+        "frame": 105,
+        "predictions": []
+    },
+    {
+        "frame": 106,
+        "predictions": [
+            {
+                "x": 191.5,
+                "y": 141.0,
+                "width": 53.0,
+                "height": 42.0,
+                "confidence": 0.4475061297416687,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "6495b12c-7788-46c5-8bdf-48eac1022400",
+                "image_path": "temp_frame_106.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 107,
+        "predictions": [
+            {
+                "x": 190.5,
+                "y": 142.0,
+                "width": 53.0,
+                "height": 40.0,
+                "confidence": 0.46589410305023193,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "53456beb-1710-4fe3-a9cc-8c889ae2ed86",
+                "image_path": "temp_frame_107.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 108,
+        "predictions": [
+            {
+                "x": 182.0,
+                "y": 135.5,
+                "width": 40.0,
+                "height": 35.0,
+                "confidence": 0.44345784187316895,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "0243715f-3bf9-4066-9a02-08bc3ea25938",
+                "image_path": "temp_frame_108.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 109,
+        "predictions": [
+            {
+                "x": 189.5,
+                "y": 144.0,
+                "width": 45.0,
+                "height": 36.0,
+                "confidence": 0.40774500370025635,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "4ae11685-f6f9-42e4-967d-f9123c5baffd",
+                "image_path": "temp_frame_109.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 110,
+        "predictions": []
+    },
+    {
+        "frame": 111,
+        "predictions": [
+            {
+                "x": 32.0,
+                "y": 99.0,
+                "width": 64.0,
+                "height": 126.0,
+                "confidence": 0.4596988558769226,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "f868b322-e42d-4cfd-93fe-093ece89f65e",
+                "image_path": "temp_frame_111.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 112,
+        "predictions": [
+            {
+                "x": 32.0,
+                "y": 100.0,
+                "width": 64.0,
+                "height": 128.0,
+                "confidence": 0.46823129057884216,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "397b4afc-e1be-479f-887b-5169468a3f30",
+                "image_path": "temp_frame_112.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 185.5,
+                "y": 141.0,
+                "width": 47.0,
+                "height": 42.0,
+                "confidence": 0.43681541085243225,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "7c911832-83b7-467e-8752-ba1e386e50ec",
+                "image_path": "temp_frame_112.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 113,
+        "predictions": [
+            {
+                "x": 32.0,
+                "y": 100.0,
+                "width": 64.0,
+                "height": 126.0,
+                "confidence": 0.4542049765586853,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "c859580d-3a47-4fa5-aa55-c5c29ddc44cf",
+                "image_path": "temp_frame_113.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 114,
+        "predictions": [
+            {
+                "x": 32.0,
+                "y": 99.5,
+                "width": 64.0,
+                "height": 127.0,
+                "confidence": 0.5932303071022034,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "33c281c0-9add-43d1-9601-44129a5fa9af",
+                "image_path": "temp_frame_114.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 182.5,
+                "y": 136.0,
+                "width": 49.0,
+                "height": 36.0,
+                "confidence": 0.4275973439216614,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "34379a70-f961-4442-a835-26bb2b5c1899",
+                "image_path": "temp_frame_114.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 115,
+        "predictions": [
+            {
+                "x": 32.0,
+                "y": 99.0,
+                "width": 64.0,
+                "height": 126.0,
+                "confidence": 0.544365644454956,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "82f6250a-6515-4c44-8405-26f2b2dd6a19",
+                "image_path": "temp_frame_115.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 116,
+        "predictions": [
+            {
+                "x": 32.0,
+                "y": 99.5,
+                "width": 64.0,
+                "height": 127.0,
+                "confidence": 0.553540825843811,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "e48d7ff7-34f0-4901-8bda-8621b4ce37d4",
+                "image_path": "temp_frame_116.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 191.0,
+                "y": 143.5,
+                "width": 50.0,
+                "height": 39.0,
+                "confidence": 0.444635272026062,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "08c8e055-28b2-42b6-b5e3-81246ed81694",
+                "image_path": "temp_frame_116.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 117,
+        "predictions": [
+            {
+                "x": 32.0,
+                "y": 100.5,
+                "width": 64.0,
+                "height": 127.0,
+                "confidence": 0.6336419582366943,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "dfb45950-fcce-484f-bc8d-26c754fd24cc",
+                "image_path": "temp_frame_117.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 191.0,
+                "y": 144.5,
+                "width": 50.0,
+                "height": 41.0,
+                "confidence": 0.5718330144882202,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "376feb78-7c36-4098-8a25-5139a9ff3683",
+                "image_path": "temp_frame_117.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 118,
+        "predictions": [
+            {
+                "x": 32.0,
+                "y": 101.0,
+                "width": 64.0,
+                "height": 126.0,
+                "confidence": 0.6124184131622314,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "9d78ab34-45fa-4e2b-8db1-276839720050",
+                "image_path": "temp_frame_118.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 191.5,
+                "y": 144.0,
+                "width": 51.0,
+                "height": 42.0,
+                "confidence": 0.5401219725608826,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "2a4c0064-e896-454f-8e48-a1a16c86b9d6",
+                "image_path": "temp_frame_118.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    },
+    {
+        "frame": 119,
+        "predictions": [
+            {
+                "x": 32.0,
+                "y": 99.0,
+                "width": 64.0,
+                "height": 126.0,
+                "confidence": 0.6443016529083252,
+                "class": "normal",
+                "class_id": 0,
+                "detection_id": "898a7529-08f1-4b2f-bd0a-41ac34978f8d",
+                "image_path": "temp_frame_119.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            },
+            {
+                "x": 192.0,
+                "y": 143.5,
+                "width": 52.0,
+                "height": 43.0,
+                "confidence": 0.5921815037727356,
+                "class": "shoplifting",
+                "class_id": 1,
+                "detection_id": "b4551934-4c40-4e4c-af0e-b139bcc60d4b",
+                "image_path": "temp_frame_119.jpg",
+                "prediction_type": "ObjectDetectionModel"
+            }
+        ]
+    }
+]
