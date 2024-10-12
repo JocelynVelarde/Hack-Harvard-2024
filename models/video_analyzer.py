@@ -17,7 +17,7 @@ def encode_image(image):
     else:
         raise TypeError("Expected str or PIL.Image.Image")
 
-def analyze_image(video_name : str, video_ext : str = 'mp4') -> str:
+def analyze_video(video_name : str, video_ext : str = 'mp4') -> str:
     img_count = save_img_range(f'{video_name}.{video_ext}', 0, 4, 0.75, '.', f'{video_name}_image')
 
     logging.info(f"Image count: {img_count}")
@@ -91,4 +91,4 @@ def analyze_image(video_name : str, video_ext : str = 'mp4') -> str:
     else :
         return "No images found for this video name"
 
-print(analyze_image(video_name='shoplifting', video_ext='mp4'))
+print(analyze_video(video_name='shoplifting', video_ext='mp4'))
