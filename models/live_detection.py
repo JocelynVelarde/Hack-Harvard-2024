@@ -8,6 +8,7 @@ import json
 from collections import deque
 import pygame
 
+from algorithms.whatsapp import WhatsappSender
 from api.mongo_connection import insert_json_file
 
 
