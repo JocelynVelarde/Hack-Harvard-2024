@@ -70,7 +70,6 @@ h11==0.14.0
 httpcore==1.0.6
 httpx==0.27.2
 huggingface-hub==0.25.2
-idna==3.10
 image==1.5.33
 Jinja2==3.1.4
 jiter==0.6.1
