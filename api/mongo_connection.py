@@ -78,7 +78,7 @@ def get_file(filename: str, database: str):
         
         print (f'Data retrieved successfully with id: {download_stream.filename}')
     except Exception as e:
-        print("Error inserting data: ", e)
+        print("Error retrieving data: ", e)
 
 def insert_json_file(filepath: str, database: str, collection: str) -> str:
     try:
