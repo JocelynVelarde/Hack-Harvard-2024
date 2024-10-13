@@ -1,13 +1,24 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
+import numpy as np
+import cv2
 
 st.set_page_config(
         page_title="Store Map",
         page_icon="🗺️",
 )
 
+
+
 image_path = "assets/topview_1.jpeg"
+img = cv2.imread(image_path)
+lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
+a_component = lab[:,:,1]
+th = cv2.threshold(a_component,120,255,cv2.THRESH_BINARY)[1]
+blur = cv2.GaussianBlur(th,(21,21), 15)
+heatmap_img = cv2.applyColorMap(blur, cv2.COLORMAP_JET)
+super_imposed_img = cv2.addWeighted(heatmap_img, 0.5, img, 0.5, 0)
 
 st.image("assets/mini2.png", use_column_width=True)
 
@@ -76,5 +87,17 @@ camera_locations_px = [
 
 for (x, y) in camera_locations_px:
     ax.plot(x, y, 'ro')  
+
+st.pyplot(fig)
+
+# Hardcode a heatmap
+np.random.seed(0)
+heatmap = np.random.normal(loc=0, scale=1, size=(height, width))
+heatmap = np.clip(heatmap, 0, 1)
+
+
+ax.imshow(heatmap, cmap='hot', alpha=0.5) 
+
+st.image(super_imposed_img, use_column_width=True)
 
 st.pyplot(fig)
