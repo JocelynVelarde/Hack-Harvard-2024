@@ -66,7 +66,7 @@ def get_all_data(database: str, collection: str) -> str:
         print("Error getting data: ", e)
         return {"error": f'Error getting data {e}'}
 
-def get_file(filename: str, database: str) -> str:
+def get_file(filename: str, database: str):
     try:
         database =  client.get_database(database)
         bucket = gridfs.GridFSBucket(database)
@@ -78,7 +78,7 @@ def get_file(filename: str, database: str) -> str:
         
         print (f'Data retrieved successfully with id: {download_stream.filename}')
     except Exception as e:
-        print("Error inserting data: ", e)
+        print("Error retrieving data: ", e)
 
 def insert_json_file(filepath: str, database: str, collection: str) -> str:
     try:
@@ -91,7 +91,10 @@ def insert_json_file(filepath: str, database: str, collection: str) -> str:
         # Wrap the data in a single parent object if it's a list
         if isinstance(data, list):
             data = {"data": data}
-        
+
+        # add filename property to the data
+        data['filename'] = filepath
+
         result = collection.insert_one(data)
         print(f'Data inserted successfully with id: {result.inserted_id}')
     except Exception as e:

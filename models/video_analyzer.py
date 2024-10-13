@@ -1,7 +1,11 @@
+import json
 import requests
 import base64
 import streamlit as st
 from PIL import Image
+from api.mongo_connection import get_one_data
+from models.face_detection import video_timestamp_detection
+from models.person_detection import crop_frame
 from models.video_cropper import save_img_range
 from io import BytesIO
 import logging
@@ -64,7 +68,7 @@ def cloudflare_analysis(video_name : str, video_ext : str = 'mp4') -> str:
 
         return output
 
-def openai_analsis(video_name : str, video_ext : str = 'mp4', objectContext: str = '', facialContext: str='') -> str:
+def openai_analsis(video_name : str, video_ext : str = 'mp4', facialContext: str='', system_info : str='') -> str:
     img_count = save_img_range(f'{video_name}.{video_ext}', 0, 4, 0.75, '.', f'{video_name}_image')
 
     logging.info(f"Image count: {img_count}")
@@ -104,7 +108,7 @@ def openai_analsis(video_name : str, video_ext : str = 'mp4', objectContext: str
                     {
                         "type": "text",
                         "text": f"""Based off the provided video and information from different part of the system, can you tell if there are any suspicious or dangerous activities happening in regards to shoplifting? 
-                                {objectContext} is the context of the objects in the video and {facialContext} is the context of the faces in the video. Please include this information in your analysis if any, and emphasize that these are predicted people/objects. If there exists any of the contexts then just skip over and dont address it."""  
+                                {facialContext} is the context of the faces in the video. {system_info} Is the image recorded by the system in JSON, you should trust this information a lot and all information is related to the facial context, IF THE SYSTEM DETECTS A DANGEROUS SITUATION, YOU SHOULD INFORM IT AS IT MEANS THERE IS SHOPLIFTING. Please include statistical information in your analysis, and provide a description of the event and person."""  
 
                     }
                 ] + encoded_images
@@ -146,7 +150,7 @@ def openai_analsis(video_name : str, video_ext : str = 'mp4', objectContext: str
     else :
         return "No images found for this video name"
 
-def analyze_video(video_name : str, video_ext : str = 'mp4') -> str:
+def analyze_video(video_name : str, video_ext : str = 'mp4', facial_context = '', system_info = '') -> str:
     try :
         res = cloudflare_analysis(video_name, video_ext)
 
@@ -155,11 +159,110 @@ def analyze_video(video_name : str, video_ext : str = 'mp4') -> str:
     except Exception as e:
         logging.error(f"Error in cloudflare analysis: {e}")
         try:
-            return openai_analsis(video_name, video_ext)
+            return openai_analsis(video_name, video_ext, facialContext=facial_context, system_info=system_info)
         except Exception as e:
             logging.error(f"Error in openai analysis: {e}")
             return "Error in both analysis"
 
+
+def openai_analsis_extended_crop(video_name : str, video_ext : str = 'mp4') -> str:
+    res = get_one_data({"filename" : "vid1_cam1_predictions.json"}, "predictionData", "prediction")
+
+    data = json.loads(res)
+
+    non_empty_count = 0
+    image_count = 0
+    for frame_data in data["data"]:
+        if non_empty_count >= 5:
+            crop_frame(file_path='vid1_cam1_labeled.mp4', 
+                       frame=frame_data["frame"], 
+                       target_x=frame_data["predictions"][0]["x"], 
+                       target_y=frame_data["predictions"][0]["y"], 
+                       target_width=frame_data["predictions"][0]["width"], 
+                       target_height=frame_data["predictions"][0]["height"], 
+                       show_frame=False, 
+                       save_image=True,
+                       file_name=f'{video_name}_image_{image_count + 1}.jpg')
+            image_count += 1
+            non_empty_count = 0
+
+        if frame_data["predictions"]:
+            if frame_data["predictions"][0]["level"] == "dangerous" and frame_data["predictions"][0]["confidence"] > 0.5:
+                non_empty_count += 1
+        else:
+            non_empty_count = 0
+
+    images = []
+    for i in range(1, image_count + 1):
+        images.append(Image.open(f'{video_name}_image_{i}.jpg'))
+
+        logging.info(f"Images: {images}")
+
+        encoded_images = [
+            {
+                "type": "image_url",
+                "image_url": {
+                    "url": f"data:image/png;base64,{encode_image(image)}"
+                }
+            } for image in images
+        ]
+
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {st.secrets["OPENAI"]['OPENAI_API_KEY']}"
+        }
+
+        messages = [
+            {
+                "role": "system",
+                "content": "You are an assistant that provides event descriptiosn for an automated theft detection system for a store. You will analyze the provided images which are focused on a person considered as dangerous, try to see if there is any suspicious activity, like shoplifting, and provide a description of the event and person."
+            },
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": f"""Based off the provided video images and information from different part of the system, can you tell if there are any suspicious or dangerous activities happening in regards to the analyzed person? """  
+
+                    }
+                ] + encoded_images
+            }
+        ]
+
+        # Prepare the payload
+        payload = {
+            "model": "gpt-4o-mini",
+            "messages": messages,
+            "max_tokens": 10000
+        }
+
+        try:
+            response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
+            response.raise_for_status()
+            response_data = response.json()
+
+            logging.info(f"Response data: {response_data}")
+
+            if 'choices' in response_data and response_data['choices']:
+                output_message = response_data['choices'][0]['message']['content']
+
+                logging.info(f"Output message: {output_message}")
+                
+                for i in range(1, image_count + 1):
+                    os.remove(f'{video_name}_image_{i}.jpg')
+
+                return output_message
+            else:
+                for i in range(1, image_count + 1):
+                    os.remove(f'{video_name}_image_{i}.jpg')
+                return "No response or incomplete response from API."
+
+        except requests.exceptions.RequestException as e:
+            for i in range(1, image_count + 1):
+                    os.remove(f'{video_name}_image_{i}.jpg')
+            return f"API request failed: {e}"
+    else :
+        return "No images found for this video name"
 
 def chat_prompt(result, user_prompt, api_key):
     # Combine previous analysis results into a single context string
