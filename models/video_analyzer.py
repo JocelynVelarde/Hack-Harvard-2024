@@ -68,7 +68,7 @@ def cloudflare_analysis(video_name : str, video_ext : str = 'mp4') -> str:
 
         return output
 
-def openai_analsis(video_name : str, video_ext : str = 'mp4', facialContext: str='') -> str:
+def openai_analsis(video_name : str, video_ext : str = 'mp4', facialContext: str='', system_info : str='') -> str:
     img_count = save_img_range(f'{video_name}.{video_ext}', 0, 4, 0.75, '.', f'{video_name}_image')
 
     logging.info(f"Image count: {img_count}")
@@ -108,7 +108,7 @@ def openai_analsis(video_name : str, video_ext : str = 'mp4', facialContext: str
                     {
                         "type": "text",
                         "text": f"""Based off the provided video and information from different part of the system, can you tell if there are any suspicious or dangerous activities happening in regards to shoplifting? 
-                                {facialContext} is the context of the faces in the video. Please include this information in your analysis if any, and emphasize that these are predicted people/objects. If there exists any of the contexts then just skip over and dont address it."""  
+                                {facialContext} is the context of the faces in the video. {system_info} Is the image recorded by the system in JSON, you should trust this information a lot and all information is related to the facial context, IF THE SYSTEM DETECTS A DANGEROUS SITUATION, YOU SHOULD INFORM IT AS IT MEANS THERE IS SHOPLIFTING. Please include statistical information in your analysis, and provide a description of the event and person."""  
 
                     }
                 ] + encoded_images
@@ -150,7 +150,7 @@ def openai_analsis(video_name : str, video_ext : str = 'mp4', facialContext: str
     else :
         return "No images found for this video name"
 
-def analyze_video(video_name : str, video_ext : str = 'mp4', facial_context = '') -> str:
+def analyze_video(video_name : str, video_ext : str = 'mp4', facial_context = '', system_info = '') -> str:
     try :
         res = cloudflare_analysis(video_name, video_ext)
 
@@ -159,7 +159,7 @@ def analyze_video(video_name : str, video_ext : str = 'mp4', facial_context = ''
     except Exception as e:
         logging.error(f"Error in cloudflare analysis: {e}")
         try:
-            return openai_analsis(video_name, video_ext, facialContext=facial_context)
+            return openai_analsis(video_name, video_ext, facialContext=facial_context, system_info=system_info)
         except Exception as e:
             logging.error(f"Error in openai analysis: {e}")
             return "Error in both analysis"

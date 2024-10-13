@@ -13,23 +13,36 @@ st.set_page_config(
 
 st.selectbox("Select a report", ["Report 1", "Report 2", "Report 3"])
 
+filename = "vid1_cam1_labeled.mp4"
+#remove the extension  and the labeled part
+baseName = os.path.splitext(filename)[0].replace("_labeled", "")
+
+st.write(f"Report for {baseName}")
+
 for index, col in enumerate(st.columns(2)):
     with col:
         if index == 0:
             st.write(f"Surveillance video")     
-            if not os.path.exists("vid1_cam1_labeled.mp4"):
-                get_file("vid1_cam1_labeled.mp4", "videoData")
-            st.video("vid1_cam1_labeled.mp4")
+            if not os.path.exists(f'{baseName}_labeled.mp4'):
+                get_file(f'{baseName}_labeled.mp4', "videoData")
+            st.video(f"{baseName}_labeled.mp4")
         elif index == 1:    
             st.write(f"Detected face")     
-            res = get_one_data({"filename" : "vid1_cam1_predictions.json"}, "predictionData", "prediction")
+            res = get_one_data({"filename" : f"{baseName}_predictions.json"}, "predictionData", "prediction")
 
             data = json.loads(res)
 
             non_empty_count = 0
             for frame_data in data["data"]:
                 if non_empty_count >= 5:
-                    video_timestamp_detection("vid1_cam1_labeled.mp4", frame_data["frame"], show_frame=False, target_x=frame_data["predictions"][0]["x"], target_y=frame_data["predictions"][0]["y"], target_width=frame_data["predictions"][0]["width"], target_height=frame_data["predictions"][0]["height"], save_image=True)
+                    video_timestamp_detection(f"{baseName}_labeled.mp4", 
+                                              frame_data["frame"], 
+                                              show_frame=False, 
+                                              target_x=frame_data["predictions"][0]["x"], 
+                                              target_y=frame_data["predictions"][0]["y"], 
+                                              target_width=frame_data["predictions"][0]["width"], 
+                                              target_height=frame_data["predictions"][0]["height"], 
+                                              save_image=True)
                     break
 
                 if frame_data["predictions"]:
@@ -38,14 +51,14 @@ for index, col in enumerate(st.columns(2)):
                 else:
                     non_empty_count = 0 
             
-            st.image('vid1_cam1_labeled_face_detection.jpg', use_column_width=True)
+            st.image(f'{baseName}_labeled_face_detection.jpg', use_column_width=True)
 
 st.subheader("Insights")
 
 from models.video_analyzer import analyze_video, openai_analsis_extended_crop
 
-text = openai_analsis_extended_crop('vid1_cam1_labeled', 'mp4')
+text = openai_analsis_extended_crop(f'{baseName}_labeled', 'mp4')
 
-text = analyze_video('vid1_cam1_labeled', 'mp4', facial_context=text)
+text = analyze_video(f'{baseName}_labeled', 'mp4', facial_context=text)
 
 st.write(text)
