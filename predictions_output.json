@@ -5,99 +5,39 @@
     },
     {
         "frame": 1,
-        "predictions": [
-            {
-                "x": 382.5,
-                "y": 308.0,
-                "width": 431.0,
-                "height": 616.0,
-                "confidence": 0.5903011560440063,
-                "class": "shoplifting",
-                "level": "dangerous"
-            }
-        ]
+        "predictions": []
     },
     {
         "frame": 2,
-        "predictions": [
-            {
-                "x": 371.0,
-                "y": 320.5,
-                "width": 472.0,
-                "height": 603.0,
-                "confidence": 0.4048286974430084,
-                "class": "shoplifting",
-                "level": "dangerous"
-            }
-        ]
+        "predictions": []
     },
     {
         "frame": 3,
-        "predictions": [
-            {
-                "x": 370.0,
-                "y": 329.5,
-                "width": 478.0,
-                "height": 603.0,
-                "confidence": 0.4341181814670563,
-                "class": "shoplifting",
-                "level": "dangerous"
-            }
-        ]
+        "predictions": []
     },
     {
         "frame": 4,
-        "predictions": [
-            {
-                "x": 355.0,
-                "y": 336.5,
-                "width": 518.0,
-                "height": 599.0,
-                "confidence": 0.43491455912590027,
-                "class": "shoplifting",
-                "level": "dangerous"
-            }
-        ]
+        "predictions": []
     },
     {
         "frame": 5,
-        "predictions": [
-            {
-                "x": 352.5,
-                "y": 340.0,
-                "width": 513.0,
-                "height": 586.0,
-                "confidence": 0.4629468321800232,
-                "class": "shoplifting",
-                "level": "dangerous"
-            }
-        ]
+        "predictions": []
     },
     {
         "frame": 6,
-        "predictions": [
-            {
-                "x": 374.5,
-                "y": 345.5,
-                "width": 465.0,
-                "height": 581.0,
-                "confidence": 0.5049313306808472,
-                "class": "shoplifting",
-                "level": "dangerous"
-            }
-        ]
+        "predictions": []
     },
     {
         "frame": 7,
         "predictions": [
             {
-                "x": 355.5,
-                "y": 331.0,
-                "width": 495.0,
-                "height": 602.0,
-                "confidence": 0.4660484492778778,
+                "x": 287.5,
+                "y": 429.5,
+                "width": 571.0,
+                "height": 421.0,
+                "confidence": 0.7379744648933411,
                 "class": "shoplifting",
-                "level": "dangerous"
+                "level": "normal"
             }
         ]
     },
@@ -105,39 +45,29 @@
         "frame": 8,
         "predictions": [
             {
-                "x": 363.5,
-                "y": 346.0,
-                "width": 485.0,
-                "height": 580.0,
-                "confidence": 0.5015223026275635,
+                "x": 254.0,
+                "y": 425.0,
+                "width": 502.0,
+                "height": 430.0,
+                "confidence": 0.34525066614151,
                 "class": "shoplifting",
-                "level": "dangerous"
+                "level": "suspicious"
             }
         ]
     },
     {
         "frame": 9,
-        "predictions": [
-            {
-                "x": 346.5,
-                "y": 332.0,
-                "width": 511.0,
-                "height": 600.0,
-                "confidence": 0.4909246861934662,
-                "class": "shoplifting",
-                "level": "dangerous"
-            }
-        ]
+        "predictions": []
     },
     {
         "frame": 10,
         "predictions": [
             {
-                "x": 377.5,
-                "y": 327.5,
-                "width": 443.0,
-                "height": 611.0,
-                "confidence": 0.4562564790248871,
+                "x": 258.5,
+                "y": 498.5,
+                "width": 507.0,
+                "height": 281.0,
+                "confidence": 0.5181376934051514,
                 "class": "shoplifting",
                 "level": "dangerous"
             }
@@ -145,41 +75,21 @@
     },
     {
         "frame": 11,
-        "predictions": [
-            {
-                "x": 365.0,
-                "y": 327.0,
-                "width": 478.0,
-                "height": 614.0,
-                "confidence": 0.44354984164237976,
-                "class": "shoplifting",
-                "level": "dangerous"
-            }
-        ]
+        "predictions": []
     },
     {
         "frame": 12,
-        "predictions": [
-            {
-                "x": 376.0,
-                "y": 324.0,
-                "width": 434.0,
-                "height": 620.0,
-                "confidence": 0.4562309980392456,
-                "class": "shoplifting",
-                "level": "dangerous"
-            }
-        ]
+        "predictions": []
     },
     {
         "frame": 13,
         "predictions": [
             {
-                "x": 371.0,
-                "y": 322.5,
-                "width": 454.0,
-                "height": 617.0,
-                "confidence": 0.41481202840805054,
+                "x": 379.0,
+                "y": 320.0,
+                "width": 312.0,
+                "height": 634.0,
+                "confidence": 0.422391414642334,
                 "class": "shoplifting",
                 "level": "dangerous"
             }
@@ -189,13 +99,13 @@
         "frame": 14,
         "predictions": [
             {
-                "x": 366.5,
-                "y": 336.0,
-                "width": 481.0,
-                "height": 590.0,
-                "confidence": 0.5012811422348022,
+                "x": 362.0,
+                "y": 320.0,
+                "width": 344.0,
+                "height": 634.0,
+                "confidence": 0.36446309089660645,
                 "class": "shoplifting",
-                "level": "dangerous"
+                "level": "suspicious"
             }
         ]
     },
@@ -203,56 +113,30 @@
         "frame": 15,
         "predictions": [
             {
-                "x": 363.0,
-                "y": 324.0,
-                "width": 478.0,
-                "height": 618.0,
-                "confidence": 0.4706282615661621,
+                "x": 376.0,
+                "y": 318.5,
+                "width": 324.0,
+                "height": 631.0,
+                "confidence": 0.32939475774765015,
                 "class": "shoplifting",
-                "level": "dangerous"
+                "level": "suspicious"
             }
         ]
     },
     {
         "frame": 16,
-        "predictions": [
-            {
-                "x": 364.5,
-                "y": 325.0,
-                "width": 435.0,
-                "height": 616.0,
-                "confidence": 0.44518187642097473,
-                "class": "shoplifting",
-                "level": "dangerous"
-            }
-        ]
+        "predictions": []
     },
     {
         "frame": 17,
-        "predictions": [
-            {
-                "x": 356.5,
-                "y": 321.0,
-                "width": 453.0,
-                "height": 624.0,
-                "confidence": 0.43262508511543274,
-                "class": "shoplifting",
-                "level": "dangerous"
-            }
-        ]
+        "predictions": []
     },
     {
         "frame": 18,
-        "predictions": [
-            {
-                "x": 366.0,
-                "y": 325.0,
-                "width": 434.0,
-                "height": 608.0,
-                "confidence": 0.5273059606552124,
-                "class": "shoplifting",
-                "level": "dangerous"
-            }
-        ]
+        "predictions": []
+    },
+    {
+        "frame": 19,
+        "predictions": []
     }
 ]

@@ -1,6 +1,9 @@
 import cv2
 from roboflow import Roboflow
 import os
+import sys
+# Add the parent directory to the Python path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import json
 from collections import deque
 import pygame

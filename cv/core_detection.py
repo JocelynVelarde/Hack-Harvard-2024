@@ -2,6 +2,7 @@ import cv2
 from roboflow import Roboflow
 import os
 import json
+
 from collections import deque
 
 class ShopliftingDetector:
