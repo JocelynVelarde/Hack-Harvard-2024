@@ -4,7 +4,6 @@ import tensorflow as tf
 tf.get_logger().setLevel('ERROR')
 from PIL import Image
 from transformers import ViTImageProcessor, ViTForImageClassification
-import json
 
 def classify_image(image_path):
     # Load the image
@@ -27,8 +26,3 @@ def classify_image(image_path):
     
     return predicted_class_label
 
-# Example usage
-if __name__ == "__main__":
-    image_path = '../assets/lq_monster.png'
-    result = classify_image(image_path)
-    print(result)
