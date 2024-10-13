@@ -100,5 +100,4 @@ def detect_frame(frame):
     # Display the resulting frame
     cv2.imshow('Face Detection', frame)
 
-video_timestamp_detection(file_path='./test.mp4', frame=140)
 cv2.destroyAllWindows()
