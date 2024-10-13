@@ -5,6 +5,9 @@ import json
 from collections import deque
 import pygame
 
+from api.mongo_connection import insert_json_file
+
+
 class LiveDetection:
     def __init__(self, api_key_file, project_name, version_num):
         with open(api_key_file, 'r') as f:
@@ -111,6 +114,6 @@ class LiveDetection:
         print(f"Predictions saved to {output_json}.")
 
 if __name__ == "__main__":
-    detector = LiveDetection(api_key_file='service_key.json', project_name="shoplifting-cuzf8", version_num=3)
-
+    detector = LiveDetection(api_key_file='cv/service_key.json', project_name="shoplifting-cuzf8", version_num=3)
+    insert_json_file("predictions_output.json", "json", "json_live_video")
     detector.process_webcam(output_json="predictions_output.json")
