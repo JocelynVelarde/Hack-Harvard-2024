@@ -64,7 +64,7 @@ def cloudflare_analysis(video_name : str, video_ext : str = 'mp4') -> str:
 
         return output
 
-def openai_analsis(video_name : str, video_ext : str = 'mp4') -> str:
+def openai_analsis(video_name : str, video_ext : str = 'mp4', objectContext: str = '', facialContext: str='') -> str:
     img_count = save_img_range(f'{video_name}.{video_ext}', 0, 4, 0.75, '.', f'{video_name}_image')
 
     logging.info(f"Image count: {img_count}")
@@ -104,7 +104,7 @@ def openai_analsis(video_name : str, video_ext : str = 'mp4') -> str:
                     {
                         "type": "text",
                         "text": f"""Based off the provided video and information from different part of the system, can you tell if there are any suspicious or dangerous activities happening in regards to shoplifting? 
-                                {objectContext} is the context of the objects in the video and {facialContext} is the context of the faces in the video. Please include this information in your analysis."""  
+                                {objectContext} is the context of the objects in the video and {facialContext} is the context of the faces in the video. Please include this information in your analysis if any, and emphasize that these are predicted people/objects. If there exists any of the contexts then just skip over and dont address it."""  
 
                     }
                 ] + encoded_images
