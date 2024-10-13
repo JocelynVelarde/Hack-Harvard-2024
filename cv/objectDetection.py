@@ -25,15 +25,10 @@ def classify_image(image_path):
     # Get the predicted class label
     predicted_class_label = model.config.id2label[predicted_class_idx]
     
-    # Return the result as JSON
-    result = {
-        "predicted_class_idx": predicted_class_idx,
-        "predicted_class_label": predicted_class_label
-    }
-    return json.dumps(result, indent=4)
+    return predicted_class_label
 
 # Example usage
 if __name__ == "__main__":
     image_path = '../assets/lq_monster.png'
-    result_json = classify_image(image_path)
-    print(result_json)
+    result = classify_image(image_path)
+    print(result)
