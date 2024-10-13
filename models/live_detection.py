@@ -74,14 +74,28 @@ class LiveDetection:
 
     def classify_predictions(self, predictions):
         processed_predictions = []
+        detected_dangerous = False  # Track if "dangerous" level is detected
+
         for obj in predictions:
             confidence = obj['confidence']
             label = obj['class']
-            
+            x = obj['x']
+            y = obj['y']
+
             if confidence > 0.6:
                 level = 'normal'
+                self.message_sent = False  # Reset the flag when back to normal
             elif 0.4 <= confidence < 0.6:
                 level = 'dangerous'
+                detected_dangerous = True
+
+                # Send a WhatsApp message if the level is 'dangerous' and no message has been sent yet
+                if not self.message_sent:
+                    message = f"Warning: Dangerous activity detected! Class: {label}, Confidence: {confidence:.2f}, Coordinates: (x: {x}, y: {y})"
+                    to_phone_number = "+13219788930"  # Replace with your actual number
+                    WhatsappSender.send_message(to_phone_number, message)
+                    print(f"Message sent: {message}")
+                    self.message_sent = True  # Ensure the message is only sent once
             else:
                 level = 'suspicious'
 
