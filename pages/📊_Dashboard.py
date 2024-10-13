@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+from api.mongo_connection import get_all_data, get_one_data
+from bson import json_util
 import json
 
 st.set_page_config(
@@ -8,7 +10,30 @@ st.set_page_config(
         page_icon="📊",
 )
 
+st.image("assets/mini3.jpg", use_column_width=True)
+
 st.title('View general statistics and insights for your store')
+
+st.divider()
+database_name = 'json'
+collection_name = 'json_live_video'
+documents = get_all_data(database_name, collection_name)
+
+documents = json.loads(documents)
+st.json(documents)
+
+document_ids = [str(doc['_id']) for doc in documents]
+
+selected_id = st.selectbox('Select Document ID', document_ids)
+
+if selected_id:
+    query = {"_id": selected_id}
+    selected_document = get_one_data(query, database_name, collection_name)
+    selected_document = json.loads(selected_document)
+    st.write(selected_document)
+
+
+st.divider()
 
 json_file_path = 'assets/data.json' 
 with open(json_file_path, 'r') as file:
