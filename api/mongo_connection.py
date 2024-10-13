@@ -2,8 +2,6 @@
 from pymongo.server_api import ServerApi
 from pymongo import MongoClient
 import streamlit as st
-client = MongoClient(st.secrets["MONGO"]["MONGO_URI"], tls=True, tlsAllowInvalidCertificates=True, server_api=ServerApi('1'))
-
 import gridfs
 import json
 from bson import ObjectId
@@ -27,15 +25,15 @@ def insert_data(data :str, database: str, collection: str) -> str:
     except Exception as e:
         print("Error inserting data: ", e)
 
-def insert_video(filepath: str, database: str) -> str:
+def insert_file(filepath: str, database: str) -> str:
     try:
-        database =  client.get_database(database)
+        database = client.get_database(database)
         bucket = gridfs.GridFSBucket(database)
 
         with bucket.open_upload_stream(filepath) as upload_stream:
             upload_stream.write(open(filepath, "rb").read())
         
-        print(f'Data inserted successfully with id: {upload_stream.filename}')
+        print(f'Data inserted successfully')
     except Exception as e:
         print("Error inserting data: ", e)
 
@@ -68,7 +66,7 @@ def get_all_data(database: str, collection: str) -> str:
         print("Error getting data: ", e)
         return {"error": f'Error getting data {e}'}
 
-def get_video(filename: str, database: str) -> str:
+def get_file(filename: str, database: str) -> str:
     try:
         database =  client.get_database(database)
         bucket = gridfs.GridFSBucket(database)
@@ -98,4 +96,3 @@ def insert_json_file(filepath: str, database: str, collection: str) -> str:
         print(f'Data inserted successfully with id: {result.inserted_id}')
     except Exception as e:
         print("Error inserting data: ", e)
-
