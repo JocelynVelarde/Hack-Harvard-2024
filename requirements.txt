@@ -127,3 +127,4 @@ urllib3==2.2.3
 matplotlib
 yarl==1.15.0
 urllib3==2.2.3
+aiohappyeyeballs==2.4.3
