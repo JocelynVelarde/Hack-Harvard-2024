@@ -103,8 +103,8 @@ def openai_analsis(video_name : str, video_ext : str = 'mp4') -> str:
                 "content": [
                     {
                         "type": "text",
-                        "text": f"Based off the provided video and information from different part of the system, can you tell if there are any suspicious or dangerous activities happening in regards to shoplifting? 
-                                {objectContext} is the context of the objects in the video and {facialContext} is the context of the faces in the video. Please include this information in your analysis."  
+                        "text": f"""Based off the provided video and information from different part of the system, can you tell if there are any suspicious or dangerous activities happening in regards to shoplifting? 
+                                {objectContext} is the context of the objects in the video and {facialContext} is the context of the faces in the video. Please include this information in your analysis."""  
 
                     }
                 ] + encoded_images
