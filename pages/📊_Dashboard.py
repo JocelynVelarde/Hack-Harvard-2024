@@ -10,12 +10,10 @@ st.set_page_config(
 
 st.title('View general statistics and insights for your store')
 
-# Load JSON data from a file
-json_file_path = 'assets/data.json'  # Replace with your JSON file path
+json_file_path = 'assets/data.json' 
 with open(json_file_path, 'r') as file:
     data = json.load(file)
 
-# Flatten the JSON data
 records = []
 for entry in data:
     frame = entry['frame']
@@ -32,7 +30,6 @@ for entry in data:
         }
         records.append(record)
 
-# Create a DataFrame
 df = pd.DataFrame(records)
 
 # Create a new column for 5-frame intervals
@@ -52,14 +49,45 @@ plot_data = pd.DataFrame({
     'count': predominant_class_counts.values
 })
 
-# Plot 4: Frame Interval vs Predominant Class Line Chart
-fig4, ax4 = plt.subplots()
-for class_name in plot_data['predominant_class'].unique():
-    class_data = plot_data[plot_data['predominant_class'] == class_name]
-    ax4.plot(class_data['frame_interval'], class_data['count'], label=class_name)
+# Plot: Scatter Plot of Normal, Dangerous, Suspicious over Frames
+fig, ax = plt.subplots()
+colors = {'normal': 'blue', 'dangerous': 'red', 'suspicious': 'orange'}
 
-ax4.set_title('Predominant Class per 5-Frame Interval')
-ax4.set_xlabel('Frame Interval')
-ax4.set_ylabel('Number of Predictions')
-ax4.legend(title='Class')
-st.pyplot(fig4)
+for class_name in ['normal', 'dangerous', 'suspicious']:
+    class_data = df[df['level'] == class_name]
+    ax.scatter(class_data['frame'], class_data['confidence'], label=class_name, color=colors[class_name], alpha=0.5)
+
+ax.set_title('Scatter Plot of Normal, Dangerous, Suspicious over Frames')
+ax.set_xlabel('Frame')
+ax.set_ylabel('Confidence')
+ax.legend(title='Level')
+st.pyplot(fig)
+
+# Plot: Histogram of Level Field for Dangerous, Suspicious, and Normal
+fig2, ax2 = plt.subplots()
+levels = ['normal', 'dangerous', 'suspicious']
+colors = {'normal': 'blue', 'dangerous': 'red', 'suspicious': 'orange'}
+
+for level in levels:
+    level_data = df[df['level'] == level]
+    ax2.hist(level_data['level'], bins=10, alpha=0.5, label=level, color=colors[level])
+
+ax2.set_title('Histogram of Level Field for Dangerous, Suspicious, and Normal')
+ax2.set_xlabel('Level')
+ax2.set_ylabel('Frequency')
+ax2.legend(title='Level')
+st.pyplot(fig2)
+
+# Plot: Timeline of Confidence Values
+fig3, ax3 = plt.subplots()
+for class_name in ['normal', 'dangerous', 'suspicious']:
+    if class_name in df['level'].unique():
+        class_data = df[df['level'] == class_name]
+        ax3.plot(class_data['frame'], class_data['confidence'], label=class_name, color=colors[class_name], alpha=0.5)
+
+ax3.set_title('Timeline of Confidence Values')
+ax3.set_xlabel('Frame')
+ax3.set_ylabel('Confidence')
+ax3.set_ylim(0, 1)
+ax3.legend(title='Level')
+st.pyplot(fig3)
