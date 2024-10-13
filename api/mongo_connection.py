@@ -91,7 +91,10 @@ def insert_json_file(filepath: str, database: str, collection: str) -> str:
         # Wrap the data in a single parent object if it's a list
         if isinstance(data, list):
             data = {"data": data}
-        
+
+        # add filename property to the data
+        data['filename'] = filepath
+
         result = collection.insert_one(data)
         print(f'Data inserted successfully with id: {result.inserted_id}')
     except Exception as e:
