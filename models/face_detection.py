@@ -2,7 +2,6 @@ import cv2
 import cv2.data
 import os
 import sys
-
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from api.mongo_connection import insert_file
 
@@ -97,7 +96,4 @@ def detect_frame(frame):
 
     os.remove('face_detection.jpg')
 
-    # Display the resulting frame
-    cv2.imshow('Face Detection', frame)
-
-cv2.destroyAllWindows()
+    cv2.destroyAllWindows()
