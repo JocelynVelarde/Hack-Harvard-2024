@@ -126,3 +126,4 @@ tzdata==2024.2
 urllib3==2.2.3
 matplotlib
 yarl==1.15.0
+urllib3==2.2.3
