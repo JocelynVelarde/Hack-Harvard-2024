@@ -1,5 +1,5 @@
 import streamlit as st
-from models.video_analyzer import analyze_video
+from models.video_analyzer import analyze_video, chat_prompt
 import os
 
 api_key = st.secrets["OPENAI"]['OPENAI_API_KEY']
@@ -36,6 +36,6 @@ st.divider()
 st.subheader('Ask questions about specific things on your scene')
 chat_input = st.text_area("Type your question here")
 if st.button("Send"):
-        #chat_response = chat_prompt(analysis_results, chat_input, api_key)
+        chat_response = chat_prompt(analysis_results, chat_input, api_key)
         st.subheader("Answer:")
-        #st.write(chat_response)
+        st.write(chat_response)

@@ -82,3 +82,20 @@ def get_video(filename: str, database: str) -> str:
     except Exception as e:
         print("Error inserting data: ", e)
 
+def insert_json_file(filepath: str, database: str, collection: str) -> str:
+    try:
+        database = client.get_database(database)
+        collection = database.get_collection(collection)
+
+        with open(filepath, 'r') as file:
+            data = json.load(file)
+        
+        # Wrap the data in a single parent object if it's a list
+        if isinstance(data, list):
+            data = {"data": data}
+        
+        result = collection.insert_one(data)
+        print(f'Data inserted successfully with id: {result.inserted_id}')
+    except Exception as e:
+        print("Error inserting data: ", e)
+
