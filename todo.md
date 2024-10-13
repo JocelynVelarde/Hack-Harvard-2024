@@ -1,7 +1,7 @@
 - [ ] connect comp viz model to frontend
-- [ ] make sure once the video has been registered, it auto starts providing the transcribed description on the right via the cloudflare hf model
-- [ ] heat map of where most stolen goods are (see matplotlib)
-- [ ] camera map (maybe combine this and previous note together)
-- [ ] matlab? databricks?
-- [ ] database input the timestamp of robbery. add a little box for "time of day for most robberies" and do a sql query to find the most
-- [ ] also from what i've heard almost everyone's doing smart city also, so we have to focus on making our project unique
+- [x] make sure once the video has been registered, it auto starts providing the transcribed description on the right via the cloudflare hf model
+- [x] heat map of where most stolen goods are (see matplotlib)
+- [x] camera map (maybe combine this and previous note together)
+- [x] matlab? databricks?
+- [x] database input the timestamp of robbery. add a little box for "time of day for most robberies" and do a sql query to find the most
+- [x] also from what i've heard almost everyone's doing smart city also, so we have to focus on making our project unique
