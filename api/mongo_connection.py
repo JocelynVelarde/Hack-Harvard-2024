@@ -66,7 +66,7 @@ def get_all_data(database: str, collection: str) -> str:
         print("Error getting data: ", e)
         return {"error": f'Error getting data {e}'}
 
-def get_file(filename: str, database: str) -> str:
+def get_file(filename: str, database: str):
     try:
         database =  client.get_database(database)
         bucket = gridfs.GridFSBucket(database)
