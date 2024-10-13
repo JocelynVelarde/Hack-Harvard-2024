@@ -263,10 +263,9 @@ def openai_analsis_extended_crop(video_name : str, video_ext : str = 'mp4') -> s
             return f"API request failed: {e}"
     else :
         return "No images found for this video name"
-
 def chat_prompt(result, user_prompt, api_key):
-    # Combine previous analysis results into a single context string
-    context = "\n".join([f"{key}: {value}" for key, value in result.items()])
+    # Use the string directly as context
+    context = result
 
     # Construct the new message with context and user prompt
     messages = [

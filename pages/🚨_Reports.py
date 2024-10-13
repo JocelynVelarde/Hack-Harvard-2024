@@ -11,11 +11,8 @@ st.set_page_config(
     page_icon="🚨",
 )
 
-options = get_all_data("videoData", "fs.fiñes")
 
-options = json.loads(options)
-
-selection = st.selectbox("Select a report", ["Vid1 cam1", "Vid3 cam1", "Vid4 cam3", "Vid5 cam1"])
+selection = st.selectbox("Select a report", ["vid1_cam1_labeled.mp4", "vid3_cam1_labeled.mp4", "vid4_cam3_labeled.mp4", "vid5_labeled_cam1.mp4"])
 
 filename = "vid1_cam1_labeled.mp4"
 #remove the extension  and the labeled part
