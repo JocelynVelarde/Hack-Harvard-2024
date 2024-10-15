@@ -1,5 +1,4 @@
 import streamlit as st
-#from models.video_analyzer import analyze_video, chat_prompt
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -11,12 +10,9 @@ st.set_page_config(
     page_icon="🚨",
 )
 
+selection = st.selectbox("Select a report", ["vid1_cam1_labeled.mp4", "vid4_cam3_labeled.mp4"])
 
-selection = st.selectbox("Select a report", ["vid1_cam1_labeled.mp4", "vid3_cam1_labeled.mp4", "vid4_cam3_labeled.mp4", "vid5_labeled_cam1.mp4"])
-
-filename = "vid1_cam1_labeled.mp4"
-#remove the extension  and the labeled part
-baseName = os.path.splitext(filename)[0].replace("_labeled", "")
+baseName = os.path.splitext(selection)[0].replace("_labeled", "")
 
 st.write(f"Report for {baseName}")
 
@@ -52,7 +48,10 @@ for index, col in enumerate(st.columns(2)):
                 else:
                     non_empty_count = 0 
             
-            st.image(f'{baseName}_labeled_face_detection.jpg', use_column_width=True)
+            try :
+                st.image(f'{baseName}_labeled_face_detection.jpg', use_column_width=True)
+            except:
+                st.write("No dangerous face detected")
 
 st.subheader("Insights")
 

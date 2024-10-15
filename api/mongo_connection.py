@@ -5,13 +5,17 @@ import streamlit as st
 import gridfs
 import json
 from bson import ObjectId
+from datetime import datetime
 
 client = MongoClient(st.secrets["MONGO"]["MONGO_URI"], tls=True, tlsAllowInvalidCertificates=True, server_api=ServerApi('1'))
+
 
 class JSONEncoder(json.JSONEncoder):
     def default(self, o):
         if isinstance(o, ObjectId):
             return str(o)
+        if isinstance(o, datetime):
+            return o.isoformat()  # Converts datetime to ISO 8601 string
         return json.JSONEncoder.default(self, o)
 
 def insert_data(data :str, database: str, collection: str) -> str:

@@ -40,7 +40,7 @@ def video_file_detection(file_path):
             print("Failed to capture frame")
             break
 
-        detect_frame(frame)
+        detect_frame(frame, show_frame=True)
         # Break the loop on 'q' key press
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
@@ -87,7 +87,7 @@ def video_timestamp_detection(file_path, frame, target_x, target_y, target_width
         return
     
     # remove the extension to the file_path
-    file_path = file_path.split('.')[0]
+    file_path = os.path.splitext(file_path)[0]
 
     detect_frame(frame, target_x=target_x, target_y=target_y,  target_height=target_height, target_width=target_width, show_frame=show_frame, save_image=save_image, file_name=f'{file_path}_face_detection.jpg')
     if show_frame:
@@ -95,7 +95,6 @@ def video_timestamp_detection(file_path, frame, target_x, target_y, target_width
 
     # Release the video capture and close windows
     video_capture.release()
-
 
 def detect_frame(frame, show_frame=True):
     # Get frame dimensions for the detector
@@ -197,7 +196,8 @@ def detect_frame(frame, target_x, target_y, target_width, target_height, show_fr
             # Remove the saved image
             if not save_image:
                 os.remove(file_name)
+        else:
+            print("No faces detected near the target position")
 
 def destroy_windwows():
     cv2.destroyAllWindows()
-
